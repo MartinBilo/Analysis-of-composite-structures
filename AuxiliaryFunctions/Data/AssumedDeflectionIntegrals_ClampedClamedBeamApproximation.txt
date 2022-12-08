@@ -1,0 +1,734 @@
+Symbolic expressions for the integrals of the assumed deflection for a
+clamped clamped beam approximation
+
+Source: AssumedDflectionIntegrals.py [v1.0] (14:13:45 03-09-2020).
+
+Xm = 
+-a * (-gamma_m * sin(lambda_m) + gamma_m * sinh(lambda_m) + cos(lambda_m) +
+cosh(lambda_m) - 2) / lambda_m
+
+XkXm = 
+a * (gamma_m.T * gamma_m * lambda_m.T**3 * sin(lambda_m.T) * cos(lambda_m) -
+gamma_m.T * gamma_m * lambda_m.T**3 * sin(lambda_m.T) * cosh(lambda_m) -
+gamma_m.T * gamma_m * lambda_m.T**3 * cos(lambda_m) * sinh(lambda_m.T) +
+gamma_m.T * gamma_m * lambda_m.T**3 * sinh(lambda_m.T) * cosh(lambda_m) -
+gamma_m.T * gamma_m * lambda_m.T**2 * lambda_m * sin(lambda_m) * cos(lambda_m.T) -
+gamma_m.T * gamma_m * lambda_m.T**2 * lambda_m * sin(lambda_m) * cosh(lambda_m.T) -
+gamma_m.T * gamma_m * lambda_m.T**2 * lambda_m * cos(lambda_m.T) * sinh(lambda_m) -
+gamma_m.T * gamma_m * lambda_m.T**2 * lambda_m * sinh(lambda_m) * cosh(lambda_m.T) +
+gamma_m.T * gamma_m * lambda_m.T * lambda_m**2 * sin(lambda_m.T) * cos(lambda_m) +
+gamma_m.T * gamma_m * lambda_m.T * lambda_m**2 * sin(lambda_m.T) * cosh(lambda_m) +
+gamma_m.T * gamma_m * lambda_m.T * lambda_m**2 * cos(lambda_m) * sinh(lambda_m.T) +
+gamma_m.T * gamma_m * lambda_m.T * lambda_m**2 * sinh(lambda_m.T) * cosh(lambda_m) -
+gamma_m.T * gamma_m * lambda_m**3 * sin(lambda_m) * cos(lambda_m.T) +
+gamma_m.T * gamma_m * lambda_m**3 * sin(lambda_m) * cosh(lambda_m.T) +
+gamma_m.T * gamma_m * lambda_m**3 * cos(lambda_m.T) * sinh(lambda_m) -
+gamma_m.T * gamma_m * lambda_m**3 * sinh(lambda_m) * cosh(lambda_m.T) +
+gamma_m.T * lambda_m.T**3 * sin(lambda_m.T) * sin(lambda_m) -
+gamma_m.T * lambda_m.T**3 * sin(lambda_m.T) * sinh(lambda_m) -
+gamma_m.T * lambda_m.T**3 * sin(lambda_m) * sinh(lambda_m.T) +
+gamma_m.T * lambda_m.T**3 * sinh(lambda_m.T) * sinh(lambda_m) +
+gamma_m.T * lambda_m.T**2 * lambda_m * cos(lambda_m.T) * cos(lambda_m) -
+gamma_m.T * lambda_m.T**2 * lambda_m * cos(lambda_m.T) * cosh(lambda_m) +
+gamma_m.T * lambda_m.T**2 * lambda_m * cos(lambda_m) * cosh(lambda_m.T) -
+gamma_m.T * lambda_m.T**2 * lambda_m * cosh(lambda_m.T) * cosh(lambda_m) +
+gamma_m.T * lambda_m.T * lambda_m**2 * sin(lambda_m.T) * sin(lambda_m) +
+gamma_m.T * lambda_m.T * lambda_m**2 * sin(lambda_m.T) * sinh(lambda_m) +
+gamma_m.T * lambda_m.T * lambda_m**2 * sin(lambda_m) * sinh(lambda_m.T) +
+gamma_m.T * lambda_m.T * lambda_m**2 * sinh(lambda_m.T) * sinh(lambda_m) +
+gamma_m.T * lambda_m**3 * cos(lambda_m.T) * cos(lambda_m) +
+gamma_m.T * lambda_m**3 * cos(lambda_m.T) * cosh(lambda_m) -
+gamma_m.T * lambda_m**3 * cos(lambda_m) * cosh(lambda_m.T) -
+gamma_m.T * lambda_m**3 * cosh(lambda_m.T) * cosh(lambda_m) -
+gamma_m * lambda_m.T**3 * cos(lambda_m.T) * cos(lambda_m) +
+gamma_m * lambda_m.T**3 * cos(lambda_m.T) * cosh(lambda_m) -
+gamma_m * lambda_m.T**3 * cos(lambda_m) * cosh(lambda_m.T) +
+gamma_m * lambda_m.T**3 * cosh(lambda_m.T) * cosh(lambda_m) -
+gamma_m * lambda_m.T**2 * lambda_m * sin(lambda_m.T) * sin(lambda_m) -
+gamma_m * lambda_m.T**2 * lambda_m * sin(lambda_m.T) * sinh(lambda_m) -
+gamma_m * lambda_m.T**2 * lambda_m * sin(lambda_m) * sinh(lambda_m.T) -
+gamma_m * lambda_m.T**2 * lambda_m * sinh(lambda_m.T) * sinh(lambda_m) -
+gamma_m * lambda_m.T * lambda_m**2 * cos(lambda_m.T) * cos(lambda_m) -
+gamma_m * lambda_m.T * lambda_m**2 * cos(lambda_m.T) * cosh(lambda_m) +
+gamma_m * lambda_m.T * lambda_m**2 * cos(lambda_m) * cosh(lambda_m.T) +
+gamma_m * lambda_m.T * lambda_m**2 * cosh(lambda_m.T) * cosh(lambda_m) -
+gamma_m * lambda_m**3 * sin(lambda_m.T) * sin(lambda_m) +
+gamma_m * lambda_m**3 * sin(lambda_m.T) * sinh(lambda_m) +
+gamma_m * lambda_m**3 * sin(lambda_m) * sinh(lambda_m.T) -
+gamma_m * lambda_m**3 * sinh(lambda_m.T) * sinh(lambda_m) -
+lambda_m.T**3 * sin(lambda_m) * cos(lambda_m.T) -
+lambda_m.T**3 * sin(lambda_m) * cosh(lambda_m.T) +
+lambda_m.T**3 * cos(lambda_m.T) * sinh(lambda_m) +
+lambda_m.T**3 * sinh(lambda_m) * cosh(lambda_m.T) +
+lambda_m.T**2 * lambda_m * sin(lambda_m.T) * cos(lambda_m) -
+lambda_m.T**2 * lambda_m * sin(lambda_m.T) * cosh(lambda_m) +
+lambda_m.T**2 * lambda_m * cos(lambda_m) * sinh(lambda_m.T) -
+lambda_m.T**2 * lambda_m * sinh(lambda_m.T) * cosh(lambda_m) -
+lambda_m.T * lambda_m**2 * sin(lambda_m) * cos(lambda_m.T) +
+lambda_m.T * lambda_m**2 * sin(lambda_m) * cosh(lambda_m.T) -
+lambda_m.T * lambda_m**2 * cos(lambda_m.T) * sinh(lambda_m) +
+lambda_m.T * lambda_m**2 * sinh(lambda_m) * cosh(lambda_m.T) +
+lambda_m**3 * sin(lambda_m.T) * cos(lambda_m) +
+lambda_m**3 * sin(lambda_m.T) * cosh(lambda_m) -
+lambda_m**3 * cos(lambda_m) * sinh(lambda_m.T) -
+lambda_m**3 * sinh(lambda_m.T) * cosh(lambda_m)) / (lambda_m.T**4 - lambda_m**4)
+
+XmXm = 
+a * (2 * gamma_m**2 * lambda_m - 2 * gamma_m**2 * sin(lambda_m) * cosh(lambda_m) +
+gamma_m**2 * sin(2 * lambda_m) / 2 -
+2 * gamma_m**2 * cos(lambda_m) * sinh(lambda_m) +
+gamma_m**2 * sinh(2 * lambda_m) / 2 - 4 * gamma_m * sin(lambda_m) * sinh(lambda_m)
+- 2 * gamma_m * cos(lambda_m)**2 + gamma_m * cosh(2 * lambda_m) + gamma_m -
+2 * sin(lambda_m) * cosh(lambda_m) - sin(2 * lambda_m) / 2 +
+2 * cos(lambda_m) * sinh(lambda_m) + sinh(2 * lambda_m) / 2) / (2 * lambda_m)
+
+MXkXm = 
+-(12 * gamma_m.T * gamma_m * lambda_m.T**7 * sin(lambda_m.T) * cos(lambda_m) -
+12 * gamma_m.T * gamma_m * lambda_m.T**7 * sin(lambda_m.T) * cosh(lambda_m) -
+12 * gamma_m.T * gamma_m * lambda_m.T**7 * cos(lambda_m) * sinh(lambda_m.T) +
+12 * gamma_m.T * gamma_m * lambda_m.T**7 * sinh(lambda_m.T) * cosh(lambda_m) -
+12 * gamma_m.T * gamma_m * lambda_m.T**6 * lambda_m * sin(lambda_m) * cos(lambda_m.T) -
+12 * gamma_m.T * gamma_m * lambda_m.T**6 * lambda_m * sin(lambda_m) * cosh(lambda_m.T) -
+12 * gamma_m.T * gamma_m * lambda_m.T**6 * lambda_m * cos(lambda_m.T) * sinh(lambda_m) -
+12 * gamma_m.T * gamma_m * lambda_m.T**6 * lambda_m * sinh(lambda_m) * cosh(lambda_m.T)
++ 24 * gamma_m.T * gamma_m * lambda_m.T**6 * cos(lambda_m.T) * cos(lambda_m) -
+24 * gamma_m.T * gamma_m * lambda_m.T**6 * cos(lambda_m.T) * cosh(lambda_m) +
+24 * gamma_m.T * gamma_m * lambda_m.T**6 * cos(lambda_m) * cosh(lambda_m.T) -
+24 * gamma_m.T * gamma_m * lambda_m.T**6 * cosh(lambda_m.T) * cosh(lambda_m) +
+12 * gamma_m.T * gamma_m * lambda_m.T**5 * lambda_m**2 * sin(lambda_m.T) * cos(lambda_m)
++ 12 * gamma_m.T * gamma_m * lambda_m.T**5 * lambda_m**2 * sin(lambda_m.T) * cosh(lambda
+_m) + 12 * gamma_m.T * gamma_m * lambda_m.T**5 * lambda_m**2 * cos(lambda_m) * sinh(la
+mbda_k) + 12 * gamma_m.T * gamma_m * lambda_m.T**5 * lambda_m**2 * sinh(lambda_m.T) * co
+sh(lambda_m) +
+48 * gamma_m.T * gamma_m * lambda_m.T**5 * lambda_m * sin(lambda_m.T) * sin(lambda_m) +
+48 * gamma_m.T * gamma_m * lambda_m.T**5 * lambda_m * sin(lambda_m.T) * sinh(lambda_m) +
+48 * gamma_m.T * gamma_m * lambda_m.T**5 * lambda_m * sin(lambda_m) * sinh(lambda_m.T) +
+48 * gamma_m.T * gamma_m * lambda_m.T**5 * lambda_m * sinh(lambda_m.T) * sinh(lambda_m)
+-
+12 * gamma_m.T * gamma_m * lambda_m.T**4 * lambda_m**3 * sin(lambda_m) * cos(lambda_m.T)
++ 12 * gamma_m.T * gamma_m * lambda_m.T**4 * lambda_m**3 * sin(lambda_m) * cosh(lambda
+_k) + 12 * gamma_m.T * gamma_m * lambda_m.T**4 * lambda_m**3 * cos(lambda_m.T) * sinh(la
+mbda_m) - 12 * gamma_m.T * gamma_m * lambda_m.T**4 * lambda_m**3 * sinh(lambda_m) * co
+sh(lambda_m.T) +
+72 * gamma_m.T * gamma_m * lambda_m.T**4 * lambda_m**2 * cos(lambda_m.T) * cos(lambda_m)
++ 72 * gamma_m.T * gamma_m * lambda_m.T**4 * lambda_m**2 * cos(lambda_m.T) * cosh(lambda
+_m) - 72 * gamma_m.T * gamma_m * lambda_m.T**4 * lambda_m**2 * cos(lambda_m) * cosh(la
+mbda_k) - 72 * gamma_m.T * gamma_m * lambda_m.T**4 * lambda_m**2 * cosh(lambda_m.T) * co
+sh(lambda_m) -
+12 * gamma_m.T * gamma_m * lambda_m.T**3 * lambda_m**4 * sin(lambda_m.T) * cos(lambda_m)
++ 12 * gamma_m.T * gamma_m * lambda_m.T**3 * lambda_m**4 * sin(lambda_m.T) * cosh(lambda
+_m) + 12 * gamma_m.T * gamma_m * lambda_m.T**3 * lambda_m**4 * cos(lambda_m) * sinh(la
+mbda_k) - 12 * gamma_m.T * gamma_m * lambda_m.T**3 * lambda_m**4 * sinh(lambda_m.T) * co
+sh(lambda_m) +
+96 * gamma_m.T * gamma_m * lambda_m.T**3 * lambda_m**3 * sin(lambda_m.T) * sin(lambda_m)
+- 96 * gamma_m.T * gamma_m * lambda_m.T**3 * lambda_m**3 * sin(lambda_m.T) * sinh(lambda
+_m) - 96 * gamma_m.T * gamma_m * lambda_m.T**3 * lambda_m**3 * sin(lambda_m) * sinh(la
+mbda_k) + 96 * gamma_m.T * gamma_m * lambda_m.T**3 * lambda_m**3 * sinh(lambda_m.T) * si
+nh(lambda_m) +
+12 * gamma_m.T * gamma_m * lambda_m.T**2 * lambda_m**5 * sin(lambda_m) * cos(lambda_m.T)
++ 12 * gamma_m.T * gamma_m * lambda_m.T**2 * lambda_m**5 * sin(lambda_m) * cosh(lambda
+_k) + 12 * gamma_m.T * gamma_m * lambda_m.T**2 * lambda_m**5 * cos(lambda_m.T) * sinh(la
+mbda_m) + 12 * gamma_m.T * gamma_m * lambda_m.T**2 * lambda_m**5 * sinh(lambda_m) * co
+sh(lambda_m.T) +
+72 * gamma_m.T * gamma_m * lambda_m.T**2 * lambda_m**4 * cos(lambda_m.T) * cos(lambda_m)
+- 72 * gamma_m.T * gamma_m * lambda_m.T**2 * lambda_m**4 * cos(lambda_m.T) * cosh(lambda
+_m) + 72 * gamma_m.T * gamma_m * lambda_m.T**2 * lambda_m**4 * cos(lambda_m) * cosh(la
+mbda_k) - 72 * gamma_m.T * gamma_m * lambda_m.T**2 * lambda_m**4 * cosh(lambda_m.T) * co
+sh(lambda_m) -
+12 * gamma_m.T * gamma_m * lambda_m.T * lambda_m**6 * sin(lambda_m.T) * cos(lambda_m) -
+12 * gamma_m.T * gamma_m * lambda_m.T * lambda_m**6 * sin(lambda_m.T) * cosh(lambda_m) -
+12 * gamma_m.T * gamma_m * lambda_m.T * lambda_m**6 * cos(lambda_m) * sinh(lambda_m.T) -
+12 * gamma_m.T * gamma_m * lambda_m.T * lambda_m**6 * sinh(lambda_m.T) * cosh(lambda_m)
++ 48 * gamma_m.T * gamma_m * lambda_m.T * lambda_m**5 * sin(lambda_m.T) * sin(lambda_m)
++ 48 * gamma_m.T * gamma_m * lambda_m.T * lambda_m**5 * sin(lambda_m.T) * sinh(lambda_m)
++ 48 * gamma_m.T * gamma_m * lambda_m.T * lambda_m**5 * sin(lambda_m) * sinh(lambda_m.T)
++
+48 * gamma_m.T * gamma_m * lambda_m.T * lambda_m**5 * sinh(lambda_m.T) * sinh(lambda_m)
++ 12 * gamma_m.T * gamma_m * lambda_m**7 * sin(lambda_m) * cos(lambda_m.T) -
+12 * gamma_m.T * gamma_m * lambda_m**7 * sin(lambda_m) * cosh(lambda_m.T) -
+12 * gamma_m.T * gamma_m * lambda_m**7 * cos(lambda_m.T) * sinh(lambda_m) +
+12 * gamma_m.T * gamma_m * lambda_m**7 * sinh(lambda_m) * cosh(lambda_m.T) +
+24 * gamma_m.T * gamma_m * lambda_m**6 * cos(lambda_m.T) * cos(lambda_m) +
+24 * gamma_m.T * gamma_m * lambda_m**6 * cos(lambda_m.T) * cosh(lambda_m) -
+24 * gamma_m.T * gamma_m * lambda_m**6 * cos(lambda_m) * cosh(lambda_m.T) -
+24 * gamma_m.T * gamma_m * lambda_m**6 * cosh(lambda_m.T) * cosh(lambda_m) +
+12 * gamma_m.T * lambda_m.T**7 * sin(lambda_m.T) * sin(lambda_m) -
+12 * gamma_m.T * lambda_m.T**7 * sin(lambda_m.T) * sinh(lambda_m) -
+12 * gamma_m.T * lambda_m.T**7 * sin(lambda_m) * sinh(lambda_m.T) +
+12 * gamma_m.T * lambda_m.T**7 * sinh(lambda_m.T) * sinh(lambda_m) +
+12 * gamma_m.T * lambda_m.T**6 * lambda_m * cos(lambda_m.T) * cos(lambda_m) -
+12 * gamma_m.T * lambda_m.T**6 * lambda_m * cos(lambda_m.T) * cosh(lambda_m) +
+12 * gamma_m.T * lambda_m.T**6 * lambda_m * cos(lambda_m) * cosh(lambda_m.T) -
+12 * gamma_m.T * lambda_m.T**6 * lambda_m * cosh(lambda_m.T) * cosh(lambda_m) +
+24 * gamma_m.T * lambda_m.T**6 * sin(lambda_m) * cos(lambda_m.T) +
+24 * gamma_m.T * lambda_m.T**6 * sin(lambda_m) * cosh(lambda_m.T) -
+24 * gamma_m.T * lambda_m.T**6 * cos(lambda_m.T) * sinh(lambda_m) -
+24 * gamma_m.T * lambda_m.T**6 * sinh(lambda_m) * cosh(lambda_m.T) +
+12 * gamma_m.T * lambda_m.T**5 * lambda_m**2 * sin(lambda_m.T) * sin(lambda_m) +
+12 * gamma_m.T * lambda_m.T**5 * lambda_m**2 * sin(lambda_m.T) * sinh(lambda_m) +
+12 * gamma_m.T * lambda_m.T**5 * lambda_m**2 * sin(lambda_m) * sinh(lambda_m.T) +
+12 * gamma_m.T * lambda_m.T**5 * lambda_m**2 * sinh(lambda_m.T) * sinh(lambda_m) -
+48 * gamma_m.T * lambda_m.T**5 * lambda_m * sin(lambda_m.T) * cos(lambda_m) +
+48 * gamma_m.T * lambda_m.T**5 * lambda_m * sin(lambda_m.T) * cosh(lambda_m) -
+48 * gamma_m.T * lambda_m.T**5 * lambda_m * cos(lambda_m) * sinh(lambda_m.T) +
+48 * gamma_m.T * lambda_m.T**5 * lambda_m * sinh(lambda_m.T) * cosh(lambda_m) +
+12 * gamma_m.T * lambda_m.T**4 * lambda_m**3 * cos(lambda_m.T) * cos(lambda_m) +
+12 * gamma_m.T * lambda_m.T**4 * lambda_m**3 * cos(lambda_m.T) * cosh(lambda_m) -
+12 * gamma_m.T * lambda_m.T**4 * lambda_m**3 * cos(lambda_m) * cosh(lambda_m.T) -
+12 * gamma_m.T * lambda_m.T**4 * lambda_m**3 * cosh(lambda_m.T) * cosh(lambda_m) +
+72 * gamma_m.T * lambda_m.T**4 * lambda_m**2 * sin(lambda_m) * cos(lambda_m.T) -
+72 * gamma_m.T * lambda_m.T**4 * lambda_m**2 * sin(lambda_m) * cosh(lambda_m.T) +
+72 * gamma_m.T * lambda_m.T**4 * lambda_m**2 * cos(lambda_m.T) * sinh(lambda_m) -
+72 * gamma_m.T * lambda_m.T**4 * lambda_m**2 * sinh(lambda_m) * cosh(lambda_m.T) -
+12 * gamma_m.T * lambda_m.T**3 * lambda_m**4 * sin(lambda_m.T) * sin(lambda_m) +
+12 * gamma_m.T * lambda_m.T**3 * lambda_m**4 * sin(lambda_m.T) * sinh(lambda_m) +
+12 * gamma_m.T * lambda_m.T**3 * lambda_m**4 * sin(lambda_m) * sinh(lambda_m.T) -
+12 * gamma_m.T * lambda_m.T**3 * lambda_m**4 * sinh(lambda_m.T) * sinh(lambda_m) -
+96 * gamma_m.T * lambda_m.T**3 * lambda_m**3 * sin(lambda_m.T) * cos(lambda_m) -
+96 * gamma_m.T * lambda_m.T**3 * lambda_m**3 * sin(lambda_m.T) * cosh(lambda_m) +
+96 * gamma_m.T * lambda_m.T**3 * lambda_m**3 * cos(lambda_m) * sinh(lambda_m.T) +
+96 * gamma_m.T * lambda_m.T**3 * lambda_m**3 * sinh(lambda_m.T) * cosh(lambda_m) -
+12 * gamma_m.T * lambda_m.T**2 * lambda_m**5 * cos(lambda_m.T) * cos(lambda_m) +
+12 * gamma_m.T * lambda_m.T**2 * lambda_m**5 * cos(lambda_m.T) * cosh(lambda_m) -
+12 * gamma_m.T * lambda_m.T**2 * lambda_m**5 * cos(lambda_m) * cosh(lambda_m.T) +
+12 * gamma_m.T * lambda_m.T**2 * lambda_m**5 * cosh(lambda_m.T) * cosh(lambda_m) +
+72 * gamma_m.T * lambda_m.T**2 * lambda_m**4 * sin(lambda_m) * cos(lambda_m.T) +
+72 * gamma_m.T * lambda_m.T**2 * lambda_m**4 * sin(lambda_m) * cosh(lambda_m.T) -
+72 * gamma_m.T * lambda_m.T**2 * lambda_m**4 * cos(lambda_m.T) * sinh(lambda_m) -
+72 * gamma_m.T * lambda_m.T**2 * lambda_m**4 * sinh(lambda_m) * cosh(lambda_m.T) -
+12 * gamma_m.T * lambda_m.T * lambda_m**6 * sin(lambda_m.T) * sin(lambda_m) -
+12 * gamma_m.T * lambda_m.T * lambda_m**6 * sin(lambda_m.T) * sinh(lambda_m) -
+12 * gamma_m.T * lambda_m.T * lambda_m**6 * sin(lambda_m) * sinh(lambda_m.T) -
+12 * gamma_m.T * lambda_m.T * lambda_m**6 * sinh(lambda_m.T) * sinh(lambda_m) -
+48 * gamma_m.T * lambda_m.T * lambda_m**5 * sin(lambda_m.T) * cos(lambda_m) +
+48 * gamma_m.T * lambda_m.T * lambda_m**5 * sin(lambda_m.T) * cosh(lambda_m) -
+48 * gamma_m.T * lambda_m.T * lambda_m**5 * cos(lambda_m) * sinh(lambda_m.T) +
+48 * gamma_m.T * lambda_m.T * lambda_m**5 * sinh(lambda_m.T) * cosh(lambda_m) -
+12 * gamma_m.T * lambda_m**7 * cos(lambda_m.T) * cos(lambda_m) -
+12 * gamma_m.T * lambda_m**7 * cos(lambda_m.T) * cosh(lambda_m) +
+12 * gamma_m.T * lambda_m**7 * cos(lambda_m) * cosh(lambda_m.T) +
+12 * gamma_m.T * lambda_m**7 * cosh(lambda_m.T) * cosh(lambda_m) +
+24 * gamma_m.T * lambda_m**6 * sin(lambda_m) * cos(lambda_m.T) -
+24 * gamma_m.T * lambda_m**6 * sin(lambda_m) * cosh(lambda_m.T) +
+24 * gamma_m.T * lambda_m**6 * cos(lambda_m.T) * sinh(lambda_m) -
+24 * gamma_m.T * lambda_m**6 * sinh(lambda_m) * cosh(lambda_m.T) -
+12 * gamma_m * lambda_m.T**7 * cos(lambda_m.T) * cos(lambda_m) +
+12 * gamma_m * lambda_m.T**7 * cos(lambda_m.T) * cosh(lambda_m) -
+12 * gamma_m * lambda_m.T**7 * cos(lambda_m) * cosh(lambda_m.T) +
+12 * gamma_m * lambda_m.T**7 * cosh(lambda_m.T) * cosh(lambda_m) -
+12 * gamma_m * lambda_m.T**6 * lambda_m * sin(lambda_m.T) * sin(lambda_m) -
+12 * gamma_m * lambda_m.T**6 * lambda_m * sin(lambda_m.T) * sinh(lambda_m) -
+12 * gamma_m * lambda_m.T**6 * lambda_m * sin(lambda_m) * sinh(lambda_m.T) -
+12 * gamma_m * lambda_m.T**6 * lambda_m * sinh(lambda_m.T) * sinh(lambda_m) +
+24 * gamma_m * lambda_m.T**6 * sin(lambda_m.T) * cos(lambda_m) -
+24 * gamma_m * lambda_m.T**6 * sin(lambda_m.T) * cosh(lambda_m) +
+24 * gamma_m * lambda_m.T**6 * cos(lambda_m) * sinh(lambda_m.T) -
+24 * gamma_m * lambda_m.T**6 * sinh(lambda_m.T) * cosh(lambda_m) -
+12 * gamma_m * lambda_m.T**5 * lambda_m**2 * cos(lambda_m.T) * cos(lambda_m) -
+12 * gamma_m * lambda_m.T**5 * lambda_m**2 * cos(lambda_m.T) * cosh(lambda_m) +
+12 * gamma_m * lambda_m.T**5 * lambda_m**2 * cos(lambda_m) * cosh(lambda_m.T) +
+12 * gamma_m * lambda_m.T**5 * lambda_m**2 * cosh(lambda_m.T) * cosh(lambda_m) -
+48 * gamma_m * lambda_m.T**5 * lambda_m * sin(lambda_m) * cos(lambda_m.T) +
+48 * gamma_m * lambda_m.T**5 * lambda_m * sin(lambda_m) * cosh(lambda_m.T) -
+48 * gamma_m * lambda_m.T**5 * lambda_m * cos(lambda_m.T) * sinh(lambda_m) +
+48 * gamma_m * lambda_m.T**5 * lambda_m * sinh(lambda_m) * cosh(lambda_m.T) -
+12 * gamma_m * lambda_m.T**4 * lambda_m**3 * sin(lambda_m.T) * sin(lambda_m) +
+12 * gamma_m * lambda_m.T**4 * lambda_m**3 * sin(lambda_m.T) * sinh(lambda_m) +
+12 * gamma_m * lambda_m.T**4 * lambda_m**3 * sin(lambda_m) * sinh(lambda_m.T) -
+12 * gamma_m * lambda_m.T**4 * lambda_m**3 * sinh(lambda_m.T) * sinh(lambda_m) +
+72 * gamma_m * lambda_m.T**4 * lambda_m**2 * sin(lambda_m.T) * cos(lambda_m) +
+72 * gamma_m * lambda_m.T**4 * lambda_m**2 * sin(lambda_m.T) * cosh(lambda_m) -
+72 * gamma_m * lambda_m.T**4 * lambda_m**2 * cos(lambda_m) * sinh(lambda_m.T) -
+72 * gamma_m * lambda_m.T**4 * lambda_m**2 * sinh(lambda_m.T) * cosh(lambda_m) +
+12 * gamma_m * lambda_m.T**3 * lambda_m**4 * cos(lambda_m.T) * cos(lambda_m) -
+12 * gamma_m * lambda_m.T**3 * lambda_m**4 * cos(lambda_m.T) * cosh(lambda_m) +
+12 * gamma_m * lambda_m.T**3 * lambda_m**4 * cos(lambda_m) * cosh(lambda_m.T) -
+12 * gamma_m * lambda_m.T**3 * lambda_m**4 * cosh(lambda_m.T) * cosh(lambda_m) -
+96 * gamma_m * lambda_m.T**3 * lambda_m**3 * sin(lambda_m) * cos(lambda_m.T) -
+96 * gamma_m * lambda_m.T**3 * lambda_m**3 * sin(lambda_m) * cosh(lambda_m.T) +
+96 * gamma_m * lambda_m.T**3 * lambda_m**3 * cos(lambda_m.T) * sinh(lambda_m) +
+96 * gamma_m * lambda_m.T**3 * lambda_m**3 * sinh(lambda_m) * cosh(lambda_m.T) +
+12 * gamma_m * lambda_m.T**2 * lambda_m**5 * sin(lambda_m.T) * sin(lambda_m) +
+12 * gamma_m * lambda_m.T**2 * lambda_m**5 * sin(lambda_m.T) * sinh(lambda_m) +
+12 * gamma_m * lambda_m.T**2 * lambda_m**5 * sin(lambda_m) * sinh(lambda_m.T) +
+12 * gamma_m * lambda_m.T**2 * lambda_m**5 * sinh(lambda_m.T) * sinh(lambda_m) +
+72 * gamma_m * lambda_m.T**2 * lambda_m**4 * sin(lambda_m.T) * cos(lambda_m) -
+72 * gamma_m * lambda_m.T**2 * lambda_m**4 * sin(lambda_m.T) * cosh(lambda_m) +
+72 * gamma_m * lambda_m.T**2 * lambda_m**4 * cos(lambda_m) * sinh(lambda_m.T) -
+72 * gamma_m * lambda_m.T**2 * lambda_m**4 * sinh(lambda_m.T) * cosh(lambda_m) +
+12 * gamma_m * lambda_m.T * lambda_m**6 * cos(lambda_m.T) * cos(lambda_m) +
+12 * gamma_m * lambda_m.T * lambda_m**6 * cos(lambda_m.T) * cosh(lambda_m) -
+12 * gamma_m * lambda_m.T * lambda_m**6 * cos(lambda_m) * cosh(lambda_m.T) -
+12 * gamma_m * lambda_m.T * lambda_m**6 * cosh(lambda_m.T) * cosh(lambda_m) -
+48 * gamma_m * lambda_m.T * lambda_m**5 * sin(lambda_m) * cos(lambda_m.T) +
+48 * gamma_m * lambda_m.T * lambda_m**5 * sin(lambda_m) * cosh(lambda_m.T) -
+48 * gamma_m * lambda_m.T * lambda_m**5 * cos(lambda_m.T) * sinh(lambda_m) +
+48 * gamma_m * lambda_m.T * lambda_m**5 * sinh(lambda_m) * cosh(lambda_m.T) +
+12 * gamma_m * lambda_m**7 * sin(lambda_m.T) * sin(lambda_m) -
+12 * gamma_m * lambda_m**7 * sin(lambda_m.T) * sinh(lambda_m) -
+12 * gamma_m * lambda_m**7 * sin(lambda_m) * sinh(lambda_m.T) +
+12 * gamma_m * lambda_m**7 * sinh(lambda_m.T) * sinh(lambda_m) +
+24 * gamma_m * lambda_m**6 * sin(lambda_m.T) * cos(lambda_m) +
+24 * gamma_m * lambda_m**6 * sin(lambda_m.T) * cosh(lambda_m) -
+24 * gamma_m * lambda_m**6 * cos(lambda_m) * sinh(lambda_m.T) -
+24 * gamma_m * lambda_m**6 * sinh(lambda_m.T) * cosh(lambda_m) -
+12 * lambda_m.T**7 * sin(lambda_m) * cos(lambda_m.T) -
+12 * lambda_m.T**7 * sin(lambda_m) * cosh(lambda_m.T) +
+12 * lambda_m.T**7 * cos(lambda_m.T) * sinh(lambda_m) +
+12 * lambda_m.T**7 * sinh(lambda_m) * cosh(lambda_m.T) +
+12 * lambda_m.T**6 * lambda_m * sin(lambda_m.T) * cos(lambda_m) -
+12 * lambda_m.T**6 * lambda_m * sin(lambda_m.T) * cosh(lambda_m) +
+12 * lambda_m.T**6 * lambda_m * cos(lambda_m) * sinh(lambda_m.T) -
+12 * lambda_m.T**6 * lambda_m * sinh(lambda_m.T) * cosh(lambda_m) +
+24 * lambda_m.T**6 * sin(lambda_m.T) * sin(lambda_m) -
+24 * lambda_m.T**6 * sin(lambda_m.T) * sinh(lambda_m) +
+24 * lambda_m.T**6 * sin(lambda_m) * sinh(lambda_m.T) -
+24 * lambda_m.T**6 * sinh(lambda_m.T) * sinh(lambda_m) -
+12 * lambda_m.T**5 * lambda_m**2 * sin(lambda_m) * cos(lambda_m.T) +
+12 * lambda_m.T**5 * lambda_m**2 * sin(lambda_m) * cosh(lambda_m.T) -
+12 * lambda_m.T**5 * lambda_m**2 * cos(lambda_m.T) * sinh(lambda_m) +
+12 * lambda_m.T**5 * lambda_m**2 * sinh(lambda_m) * cosh(lambda_m.T) +
+48 * lambda_m.T**5 * lambda_m * cos(lambda_m.T) * cos(lambda_m) -
+48 * lambda_m.T**5 * lambda_m * cos(lambda_m.T) * cosh(lambda_m) -
+48 * lambda_m.T**5 * lambda_m * cos(lambda_m) * cosh(lambda_m.T) +
+48 * lambda_m.T**5 * lambda_m * cosh(lambda_m.T) * cosh(lambda_m) +
+12 * lambda_m.T**4 * lambda_m**3 * sin(lambda_m.T) * cos(lambda_m) +
+12 * lambda_m.T**4 * lambda_m**3 * sin(lambda_m.T) * cosh(lambda_m) -
+12 * lambda_m.T**4 * lambda_m**3 * cos(lambda_m) * sinh(lambda_m.T) -
+12 * lambda_m.T**4 * lambda_m**3 * sinh(lambda_m.T) * cosh(lambda_m) +
+72 * lambda_m.T**4 * lambda_m**2 * sin(lambda_m.T) * sin(lambda_m) +
+72 * lambda_m.T**4 * lambda_m**2 * sin(lambda_m.T) * sinh(lambda_m) -
+72 * lambda_m.T**4 * lambda_m**2 * sin(lambda_m) * sinh(lambda_m.T) -
+72 * lambda_m.T**4 * lambda_m**2 * sinh(lambda_m.T) * sinh(lambda_m) +
+12 * lambda_m.T**3 * lambda_m**4 * sin(lambda_m) * cos(lambda_m.T) +
+12 * lambda_m.T**3 * lambda_m**4 * sin(lambda_m) * cosh(lambda_m.T) -
+12 * lambda_m.T**3 * lambda_m**4 * cos(lambda_m.T) * sinh(lambda_m) -
+12 * lambda_m.T**3 * lambda_m**4 * sinh(lambda_m) * cosh(lambda_m.T) +
+96 * lambda_m.T**3 * lambda_m**3 * cos(lambda_m.T) * cos(lambda_m) +
+96 * lambda_m.T**3 * lambda_m**3 * cos(lambda_m.T) * cosh(lambda_m) +
+96 * lambda_m.T**3 * lambda_m**3 * cos(lambda_m) * cosh(lambda_m.T) +
+96 * lambda_m.T**3 * lambda_m**3 * cosh(lambda_m.T) * cosh(lambda_m) -
+384 * lambda_m.T**3 * lambda_m**3 -
+12 * lambda_m.T**2 * lambda_m**5 * sin(lambda_m.T) * cos(lambda_m) +
+12 * lambda_m.T**2 * lambda_m**5 * sin(lambda_m.T) * cosh(lambda_m) -
+12 * lambda_m.T**2 * lambda_m**5 * cos(lambda_m) * sinh(lambda_m.T) +
+12 * lambda_m.T**2 * lambda_m**5 * sinh(lambda_m.T) * cosh(lambda_m) +
+72 * lambda_m.T**2 * lambda_m**4 * sin(lambda_m.T) * sin(lambda_m) -
+72 * lambda_m.T**2 * lambda_m**4 * sin(lambda_m.T) * sinh(lambda_m) +
+72 * lambda_m.T**2 * lambda_m**4 * sin(lambda_m) * sinh(lambda_m.T) -
+72 * lambda_m.T**2 * lambda_m**4 * sinh(lambda_m.T) * sinh(lambda_m) +
+12 * lambda_m.T * lambda_m**6 * sin(lambda_m) * cos(lambda_m.T) -
+12 * lambda_m.T * lambda_m**6 * sin(lambda_m) * cosh(lambda_m.T) +
+12 * lambda_m.T * lambda_m**6 * cos(lambda_m.T) * sinh(lambda_m) -
+12 * lambda_m.T * lambda_m**6 * sinh(lambda_m) * cosh(lambda_m.T) +
+48 * lambda_m.T * lambda_m**5 * cos(lambda_m.T) * cos(lambda_m) -
+48 * lambda_m.T * lambda_m**5 * cos(lambda_m.T) * cosh(lambda_m) -
+48 * lambda_m.T * lambda_m**5 * cos(lambda_m) * cosh(lambda_m.T) +
+48 * lambda_m.T * lambda_m**5 * cosh(lambda_m.T) * cosh(lambda_m) -
+12 * lambda_m**7 * sin(lambda_m.T) * cos(lambda_m) -
+12 * lambda_m**7 * sin(lambda_m.T) * cosh(lambda_m) +
+12 * lambda_m**7 * cos(lambda_m) * sinh(lambda_m.T) +
+12 * lambda_m**7 * sinh(lambda_m.T) * cosh(lambda_m) +
+24 * lambda_m**6 * sin(lambda_m.T) * sin(lambda_m) +
+24 * lambda_m**6 * sin(lambda_m.T) * sinh(lambda_m) -
+24 * lambda_m**6 * sin(lambda_m) * sinh(lambda_m.T) -
+24 * lambda_m**6 * sinh(lambda_m.T) * sinh(lambda_m)) / (a * (lambda_m.T**8 -
+2 * lambda_m.T**4 * lambda_m**4 + lambda_m**8))
+
+MXmXm = 
+6 * (2 * gamma_m**2 * lambda_m * sin(lambda_m) * cosh(lambda_m) -
+gamma_m**2 * lambda_m * sin(2 * lambda_m) / 2 +
+2 * gamma_m**2 * lambda_m * cos(lambda_m) * sinh(lambda_m) -
+gamma_m**2 * lambda_m * sinh(2 * lambda_m) / 2 -
+4 * gamma_m**2 * sin(lambda_m) * sinh(lambda_m) -
+gamma_m**2 * cos(lambda_m)**2 + gamma_m**2 * cosh(2 * lambda_m) / 2 +
+gamma_m**2 / 2 - 2 * gamma_m * lambda_m * sin(lambda_m)**2 +
+4 * gamma_m * lambda_m * sin(lambda_m) * sinh(lambda_m) -
+gamma_m * lambda_m * cosh(2 * lambda_m) + gamma_m * lambda_m -
+4 * gamma_m * sin(lambda_m) * cosh(lambda_m) - gamma_m * sin(2 * lambda_m) +
+4 * gamma_m * cos(lambda_m) * sinh(lambda_m) + gamma_m * sinh(2 * lambda_m) +
+2 * lambda_m * sin(lambda_m) * cosh(lambda_m) + lambda_m * sin(2 * lambda_m) / 2 -
+2 * lambda_m * cos(lambda_m) * sinh(lambda_m) - lambda_m * sinh(2 * lambda_m) / 2
++ cos(lambda_m)**2 + 4 * cos(lambda_m) * cosh(lambda_m) +
+cosh(2 * lambda_m) / 2 - 11 / 2) / (a * lambda_m**2)
+
+XkddXm = 
+-lambda_m**2 * (gamma_m.T * gamma_m * lambda_m.T**3 * sin(lambda_m.T) * cos(lambda_m)
++ gamma_m.T * gamma_m * lambda_m.T**3 * sin(lambda_m.T) * cosh(lambda_m) -
+gamma_m.T * gamma_m * lambda_m.T**3 * cos(lambda_m) * sinh(lambda_m.T) -
+gamma_m.T * gamma_m * lambda_m.T**3 * sinh(lambda_m.T) * cosh(lambda_m) -
+gamma_m.T * gamma_m * lambda_m.T**2 * lambda_m * sin(lambda_m) * cos(lambda_m.T) -
+gamma_m.T * gamma_m * lambda_m.T**2 * lambda_m * sin(lambda_m) * cosh(lambda_m.T) +
+gamma_m.T * gamma_m * lambda_m.T**2 * lambda_m * cos(lambda_m.T) * sinh(lambda_m) +
+gamma_m.T * gamma_m * lambda_m.T**2 * lambda_m * sinh(lambda_m) * cosh(lambda_m.T) +
+gamma_m.T * gamma_m * lambda_m.T * lambda_m**2 * sin(lambda_m.T) * cos(lambda_m) -
+gamma_m.T * gamma_m * lambda_m.T * lambda_m**2 * sin(lambda_m.T) * cosh(lambda_m) +
+gamma_m.T * gamma_m * lambda_m.T * lambda_m**2 * cos(lambda_m) * sinh(lambda_m.T) -
+gamma_m.T * gamma_m * lambda_m.T * lambda_m**2 * sinh(lambda_m.T) * cosh(lambda_m) -
+gamma_m.T * gamma_m * lambda_m**3 * sin(lambda_m) * cos(lambda_m.T) +
+gamma_m.T * gamma_m * lambda_m**3 * sin(lambda_m) * cosh(lambda_m.T) -
+gamma_m.T * gamma_m * lambda_m**3 * cos(lambda_m.T) * sinh(lambda_m) +
+gamma_m.T * gamma_m * lambda_m**3 * sinh(lambda_m) * cosh(lambda_m.T) +
+gamma_m.T * lambda_m.T**3 * sin(lambda_m.T) * sin(lambda_m) +
+gamma_m.T * lambda_m.T**3 * sin(lambda_m.T) * sinh(lambda_m) -
+gamma_m.T * lambda_m.T**3 * sin(lambda_m) * sinh(lambda_m.T) -
+gamma_m.T * lambda_m.T**3 * sinh(lambda_m.T) * sinh(lambda_m) +
+gamma_m.T * lambda_m.T**2 * lambda_m * cos(lambda_m.T) * cos(lambda_m) +
+gamma_m.T * lambda_m.T**2 * lambda_m * cos(lambda_m.T) * cosh(lambda_m) +
+gamma_m.T * lambda_m.T**2 * lambda_m * cos(lambda_m) * cosh(lambda_m.T) +
+gamma_m.T * lambda_m.T**2 * lambda_m * cosh(lambda_m.T) * cosh(lambda_m) -
+4 * gamma_m.T * lambda_m.T**2 * lambda_m +
+gamma_m.T * lambda_m.T * lambda_m**2 * sin(lambda_m.T) * sin(lambda_m) -
+gamma_m.T * lambda_m.T * lambda_m**2 * sin(lambda_m.T) * sinh(lambda_m) +
+gamma_m.T * lambda_m.T * lambda_m**2 * sin(lambda_m) * sinh(lambda_m.T) -
+gamma_m.T * lambda_m.T * lambda_m**2 * sinh(lambda_m.T) * sinh(lambda_m) +
+gamma_m.T * lambda_m**3 * cos(lambda_m.T) * cos(lambda_m) -
+gamma_m.T * lambda_m**3 * cos(lambda_m.T) * cosh(lambda_m) -
+gamma_m.T * lambda_m**3 * cos(lambda_m) * cosh(lambda_m.T) +
+gamma_m.T * lambda_m**3 * cosh(lambda_m.T) * cosh(lambda_m) -
+gamma_m * lambda_m.T**3 * cos(lambda_m.T) * cos(lambda_m) -
+gamma_m * lambda_m.T**3 * cos(lambda_m.T) * cosh(lambda_m) -
+gamma_m * lambda_m.T**3 * cos(lambda_m) * cosh(lambda_m.T) -
+gamma_m * lambda_m.T**3 * cosh(lambda_m.T) * cosh(lambda_m) +
+4 * gamma_m * lambda_m.T**3 -
+gamma_m * lambda_m.T**2 * lambda_m * sin(lambda_m.T) * sin(lambda_m) +
+gamma_m * lambda_m.T**2 * lambda_m * sin(lambda_m.T) * sinh(lambda_m) -
+gamma_m * lambda_m.T**2 * lambda_m * sin(lambda_m) * sinh(lambda_m.T) +
+gamma_m * lambda_m.T**2 * lambda_m * sinh(lambda_m.T) * sinh(lambda_m) -
+gamma_m * lambda_m.T * lambda_m**2 * cos(lambda_m.T) * cos(lambda_m) +
+gamma_m * lambda_m.T * lambda_m**2 * cos(lambda_m.T) * cosh(lambda_m) +
+gamma_m * lambda_m.T * lambda_m**2 * cos(lambda_m) * cosh(lambda_m.T) -
+gamma_m * lambda_m.T * lambda_m**2 * cosh(lambda_m.T) * cosh(lambda_m) -
+gamma_m * lambda_m**3 * sin(lambda_m.T) * sin(lambda_m) -
+gamma_m * lambda_m**3 * sin(lambda_m.T) * sinh(lambda_m) +
+gamma_m * lambda_m**3 * sin(lambda_m) * sinh(lambda_m.T) +
+gamma_m * lambda_m**3 * sinh(lambda_m.T) * sinh(lambda_m) -
+lambda_m.T**3 * sin(lambda_m) * cos(lambda_m.T) -
+lambda_m.T**3 * sin(lambda_m) * cosh(lambda_m.T) -
+lambda_m.T**3 * cos(lambda_m.T) * sinh(lambda_m) -
+lambda_m.T**3 * sinh(lambda_m) * cosh(lambda_m.T) +
+lambda_m.T**2 * lambda_m * sin(lambda_m.T) * cos(lambda_m) +
+lambda_m.T**2 * lambda_m * sin(lambda_m.T) * cosh(lambda_m) +
+lambda_m.T**2 * lambda_m * cos(lambda_m) * sinh(lambda_m.T) +
+lambda_m.T**2 * lambda_m * sinh(lambda_m.T) * cosh(lambda_m) -
+lambda_m.T * lambda_m**2 * sin(lambda_m) * cos(lambda_m.T) +
+lambda_m.T * lambda_m**2 * sin(lambda_m) * cosh(lambda_m.T) +
+lambda_m.T * lambda_m**2 * cos(lambda_m.T) * sinh(lambda_m) -
+lambda_m.T * lambda_m**2 * sinh(lambda_m) * cosh(lambda_m.T) +
+lambda_m**3 * sin(lambda_m.T) * cos(lambda_m) -
+lambda_m**3 * sin(lambda_m.T) * cosh(lambda_m) -
+lambda_m**3 * cos(lambda_m) * sinh(lambda_m.T) +
+lambda_m**3 * sinh(lambda_m.T) * cosh(lambda_m)) / (a * (lambda_m.T**4 -
+lambda_m**4))
+
+XmddXm = 
+lambda_m * (-gamma_m**2 * sin(2 * lambda_m) / 2 +
+gamma_m**2 * sinh(2 * lambda_m) / 2 + gamma_m * cos(2 * lambda_m) +
+gamma_m * cosh(2 * lambda_m) - 2 * gamma_m - 2 * lambda_m + sin(2 * lambda_m) / 2
++ sinh(2 * lambda_m) / 2) / (2 * a)
+
+dXkdXm = 
+-lambda_m.T * lambda_m * (gamma_m.T * gamma_m * lambda_m.T**3 * sin(lambda_m) * cos(lamb
+da_k) - gamma_m.T * gamma_m * lambda_m.T**3 * sin(lambda_m) * cosh(lambda_m.T) +
+gamma_m.T * gamma_m * lambda_m.T**3 * cos(lambda_m.T) * sinh(lambda_m) -
+gamma_m.T * gamma_m * lambda_m.T**3 * sinh(lambda_m) * cosh(lambda_m.T) -
+gamma_m.T * gamma_m * lambda_m.T**2 * lambda_m * sin(lambda_m.T) * cos(lambda_m) -
+gamma_m.T * gamma_m * lambda_m.T**2 * lambda_m * sin(lambda_m.T) * cosh(lambda_m) +
+gamma_m.T * gamma_m * lambda_m.T**2 * lambda_m * cos(lambda_m) * sinh(lambda_m.T) +
+gamma_m.T * gamma_m * lambda_m.T**2 * lambda_m * sinh(lambda_m.T) * cosh(lambda_m) +
+gamma_m.T * gamma_m * lambda_m.T * lambda_m**2 * sin(lambda_m) * cos(lambda_m.T) +
+gamma_m.T * gamma_m * lambda_m.T * lambda_m**2 * sin(lambda_m) * cosh(lambda_m.T) -
+gamma_m.T * gamma_m * lambda_m.T * lambda_m**2 * cos(lambda_m.T) * sinh(lambda_m) -
+gamma_m.T * gamma_m * lambda_m.T * lambda_m**2 * sinh(lambda_m) * cosh(lambda_m.T) -
+gamma_m.T * gamma_m * lambda_m**3 * sin(lambda_m.T) * cos(lambda_m) +
+gamma_m.T * gamma_m * lambda_m**3 * sin(lambda_m.T) * cosh(lambda_m) -
+gamma_m.T * gamma_m * lambda_m**3 * cos(lambda_m) * sinh(lambda_m.T) +
+gamma_m.T * gamma_m * lambda_m**3 * sinh(lambda_m.T) * cosh(lambda_m) -
+gamma_m.T * lambda_m.T**3 * cos(lambda_m.T) * cos(lambda_m) +
+gamma_m.T * lambda_m.T**3 * cos(lambda_m.T) * cosh(lambda_m) +
+gamma_m.T * lambda_m.T**3 * cos(lambda_m) * cosh(lambda_m.T) -
+gamma_m.T * lambda_m.T**3 * cosh(lambda_m.T) * cosh(lambda_m) -
+gamma_m.T * lambda_m.T**2 * lambda_m * sin(lambda_m.T) * sin(lambda_m) -
+gamma_m.T * lambda_m.T**2 * lambda_m * sin(lambda_m.T) * sinh(lambda_m) +
+gamma_m.T * lambda_m.T**2 * lambda_m * sin(lambda_m) * sinh(lambda_m.T) +
+gamma_m.T * lambda_m.T**2 * lambda_m * sinh(lambda_m.T) * sinh(lambda_m) -
+gamma_m.T * lambda_m.T * lambda_m**2 * cos(lambda_m.T) * cos(lambda_m) -
+gamma_m.T * lambda_m.T * lambda_m**2 * cos(lambda_m.T) * cosh(lambda_m) -
+gamma_m.T * lambda_m.T * lambda_m**2 * cos(lambda_m) * cosh(lambda_m.T) -
+gamma_m.T * lambda_m.T * lambda_m**2 * cosh(lambda_m.T) * cosh(lambda_m) +
+4 * gamma_m.T * lambda_m.T * lambda_m**2 -
+gamma_m.T * lambda_m**3 * sin(lambda_m.T) * sin(lambda_m) +
+gamma_m.T * lambda_m**3 * sin(lambda_m.T) * sinh(lambda_m) -
+gamma_m.T * lambda_m**3 * sin(lambda_m) * sinh(lambda_m.T) +
+gamma_m.T * lambda_m**3 * sinh(lambda_m.T) * sinh(lambda_m) +
+gamma_m * lambda_m.T**3 * sin(lambda_m.T) * sin(lambda_m) +
+gamma_m * lambda_m.T**3 * sin(lambda_m.T) * sinh(lambda_m) -
+gamma_m * lambda_m.T**3 * sin(lambda_m) * sinh(lambda_m.T) -
+gamma_m * lambda_m.T**3 * sinh(lambda_m.T) * sinh(lambda_m) +
+gamma_m * lambda_m.T**2 * lambda_m * cos(lambda_m.T) * cos(lambda_m) +
+gamma_m * lambda_m.T**2 * lambda_m * cos(lambda_m.T) * cosh(lambda_m) +
+gamma_m * lambda_m.T**2 * lambda_m * cos(lambda_m) * cosh(lambda_m.T) +
+gamma_m * lambda_m.T**2 * lambda_m * cosh(lambda_m.T) * cosh(lambda_m) -
+4 * gamma_m * lambda_m.T**2 * lambda_m +
+gamma_m * lambda_m.T * lambda_m**2 * sin(lambda_m.T) * sin(lambda_m) -
+gamma_m * lambda_m.T * lambda_m**2 * sin(lambda_m.T) * sinh(lambda_m) +
+gamma_m * lambda_m.T * lambda_m**2 * sin(lambda_m) * sinh(lambda_m.T) -
+gamma_m * lambda_m.T * lambda_m**2 * sinh(lambda_m.T) * sinh(lambda_m) +
+gamma_m * lambda_m**3 * cos(lambda_m.T) * cos(lambda_m) -
+gamma_m * lambda_m**3 * cos(lambda_m.T) * cosh(lambda_m) -
+gamma_m * lambda_m**3 * cos(lambda_m) * cosh(lambda_m.T) +
+gamma_m * lambda_m**3 * cosh(lambda_m.T) * cosh(lambda_m) -
+lambda_m.T**3 * sin(lambda_m.T) * cos(lambda_m) +
+lambda_m.T**3 * sin(lambda_m.T) * cosh(lambda_m) +
+lambda_m.T**3 * cos(lambda_m) * sinh(lambda_m.T) -
+lambda_m.T**3 * sinh(lambda_m.T) * cosh(lambda_m) +
+lambda_m.T**2 * lambda_m * sin(lambda_m) * cos(lambda_m.T) +
+lambda_m.T**2 * lambda_m * sin(lambda_m) * cosh(lambda_m.T) +
+lambda_m.T**2 * lambda_m * cos(lambda_m.T) * sinh(lambda_m) +
+lambda_m.T**2 * lambda_m * sinh(lambda_m) * cosh(lambda_m.T) -
+lambda_m.T * lambda_m**2 * sin(lambda_m.T) * cos(lambda_m) -
+lambda_m.T * lambda_m**2 * sin(lambda_m.T) * cosh(lambda_m) -
+lambda_m.T * lambda_m**2 * cos(lambda_m) * sinh(lambda_m.T) -
+lambda_m.T * lambda_m**2 * sinh(lambda_m.T) * cosh(lambda_m) +
+lambda_m**3 * sin(lambda_m) * cos(lambda_m.T) -
+lambda_m**3 * sin(lambda_m) * cosh(lambda_m.T) -
+lambda_m**3 * cos(lambda_m.T) * sinh(lambda_m) +
+lambda_m**3 * sinh(lambda_m) * cosh(lambda_m.T)) / (a * (lambda_m.T**4 -
+lambda_m**4))
+
+dXmdXm = 
+lambda_m * (2 * gamma_m**2 * sin(lambda_m) * cosh(lambda_m) -
+gamma_m**2 * sin(2 * lambda_m) / 2 -
+2 * gamma_m**2 * cos(lambda_m) * sinh(lambda_m) +
+gamma_m**2 * sinh(2 * lambda_m) / 2 - 4 * gamma_m * cos(lambda_m) * cosh(lambda_m)
++ gamma_m * cos(2 * lambda_m) + gamma_m * cosh(2 * lambda_m) + 2 * gamma_m +
+2 * lambda_m - 2 * sin(lambda_m) * cosh(lambda_m) + sin(2 * lambda_m) / 2 -
+2 * cos(lambda_m) * sinh(lambda_m) + sinh(2 * lambda_m) / 2) / (2 * a)
+
+ddXkddXm = 
+lambda_m.T**2 * lambda_m**2 * (gamma_m.T * gamma_m * lambda_m.T**3 * sin(lambda_m.T) * cos
+(lambda_m) + gamma_m.T * gamma_m * lambda_m.T**3 * sin(lambda_m.T) * cosh(lambda_m)
++ gamma_m.T * gamma_m * lambda_m.T**3 * cos(lambda_m) * sinh(lambda_m.T) +
+gamma_m.T * gamma_m * lambda_m.T**3 * sinh(lambda_m.T) * cosh(lambda_m) -
+gamma_m.T * gamma_m * lambda_m.T**2 * lambda_m * sin(lambda_m) * cos(lambda_m.T) +
+gamma_m.T * gamma_m * lambda_m.T**2 * lambda_m * sin(lambda_m) * cosh(lambda_m.T) +
+gamma_m.T * gamma_m * lambda_m.T**2 * lambda_m * cos(lambda_m.T) * sinh(lambda_m) -
+gamma_m.T * gamma_m * lambda_m.T**2 * lambda_m * sinh(lambda_m) * cosh(lambda_m.T) +
+gamma_m.T * gamma_m * lambda_m.T * lambda_m**2 * sin(lambda_m.T) * cos(lambda_m) -
+gamma_m.T * gamma_m * lambda_m.T * lambda_m**2 * sin(lambda_m.T) * cosh(lambda_m) -
+gamma_m.T * gamma_m * lambda_m.T * lambda_m**2 * cos(lambda_m) * sinh(lambda_m.T) +
+gamma_m.T * gamma_m * lambda_m.T * lambda_m**2 * sinh(lambda_m.T) * cosh(lambda_m) -
+gamma_m.T * gamma_m * lambda_m**3 * sin(lambda_m) * cos(lambda_m.T) -
+gamma_m.T * gamma_m * lambda_m**3 * sin(lambda_m) * cosh(lambda_m.T) -
+gamma_m.T * gamma_m * lambda_m**3 * cos(lambda_m.T) * sinh(lambda_m) -
+gamma_m.T * gamma_m * lambda_m**3 * sinh(lambda_m) * cosh(lambda_m.T) +
+gamma_m.T * lambda_m.T**3 * sin(lambda_m.T) * sin(lambda_m) +
+gamma_m.T * lambda_m.T**3 * sin(lambda_m.T) * sinh(lambda_m) +
+gamma_m.T * lambda_m.T**3 * sin(lambda_m) * sinh(lambda_m.T) +
+gamma_m.T * lambda_m.T**3 * sinh(lambda_m.T) * sinh(lambda_m) +
+gamma_m.T * lambda_m.T**2 * lambda_m * cos(lambda_m.T) * cos(lambda_m) +
+gamma_m.T * lambda_m.T**2 * lambda_m * cos(lambda_m.T) * cosh(lambda_m) -
+gamma_m.T * lambda_m.T**2 * lambda_m * cos(lambda_m) * cosh(lambda_m.T) -
+gamma_m.T * lambda_m.T**2 * lambda_m * cosh(lambda_m.T) * cosh(lambda_m) +
+gamma_m.T * lambda_m.T * lambda_m**2 * sin(lambda_m.T) * sin(lambda_m) -
+gamma_m.T * lambda_m.T * lambda_m**2 * sin(lambda_m.T) * sinh(lambda_m) -
+gamma_m.T * lambda_m.T * lambda_m**2 * sin(lambda_m) * sinh(lambda_m.T) +
+gamma_m.T * lambda_m.T * lambda_m**2 * sinh(lambda_m.T) * sinh(lambda_m) +
+gamma_m.T * lambda_m**3 * cos(lambda_m.T) * cos(lambda_m) -
+gamma_m.T * lambda_m**3 * cos(lambda_m.T) * cosh(lambda_m) +
+gamma_m.T * lambda_m**3 * cos(lambda_m) * cosh(lambda_m.T) -
+gamma_m.T * lambda_m**3 * cosh(lambda_m.T) * cosh(lambda_m) -
+gamma_m * lambda_m.T**3 * cos(lambda_m.T) * cos(lambda_m) -
+gamma_m * lambda_m.T**3 * cos(lambda_m.T) * cosh(lambda_m) +
+gamma_m * lambda_m.T**3 * cos(lambda_m) * cosh(lambda_m.T) +
+gamma_m * lambda_m.T**3 * cosh(lambda_m.T) * cosh(lambda_m) -
+gamma_m * lambda_m.T**2 * lambda_m * sin(lambda_m.T) * sin(lambda_m) +
+gamma_m * lambda_m.T**2 * lambda_m * sin(lambda_m.T) * sinh(lambda_m) +
+gamma_m * lambda_m.T**2 * lambda_m * sin(lambda_m) * sinh(lambda_m.T) -
+gamma_m * lambda_m.T**2 * lambda_m * sinh(lambda_m.T) * sinh(lambda_m) -
+gamma_m * lambda_m.T * lambda_m**2 * cos(lambda_m.T) * cos(lambda_m) +
+gamma_m * lambda_m.T * lambda_m**2 * cos(lambda_m.T) * cosh(lambda_m) -
+gamma_m * lambda_m.T * lambda_m**2 * cos(lambda_m) * cosh(lambda_m.T) +
+gamma_m * lambda_m.T * lambda_m**2 * cosh(lambda_m.T) * cosh(lambda_m) -
+gamma_m * lambda_m**3 * sin(lambda_m.T) * sin(lambda_m) -
+gamma_m * lambda_m**3 * sin(lambda_m.T) * sinh(lambda_m) -
+gamma_m * lambda_m**3 * sin(lambda_m) * sinh(lambda_m.T) -
+gamma_m * lambda_m**3 * sinh(lambda_m.T) * sinh(lambda_m) -
+lambda_m.T**3 * sin(lambda_m) * cos(lambda_m.T) +
+lambda_m.T**3 * sin(lambda_m) * cosh(lambda_m.T) -
+lambda_m.T**3 * cos(lambda_m.T) * sinh(lambda_m) +
+lambda_m.T**3 * sinh(lambda_m) * cosh(lambda_m.T) +
+lambda_m.T**2 * lambda_m * sin(lambda_m.T) * cos(lambda_m) +
+lambda_m.T**2 * lambda_m * sin(lambda_m.T) * cosh(lambda_m) -
+lambda_m.T**2 * lambda_m * cos(lambda_m) * sinh(lambda_m.T) -
+lambda_m.T**2 * lambda_m * sinh(lambda_m.T) * cosh(lambda_m) -
+lambda_m.T * lambda_m**2 * sin(lambda_m) * cos(lambda_m.T) -
+lambda_m.T * lambda_m**2 * sin(lambda_m) * cosh(lambda_m.T) +
+lambda_m.T * lambda_m**2 * cos(lambda_m.T) * sinh(lambda_m) +
+lambda_m.T * lambda_m**2 * sinh(lambda_m) * cosh(lambda_m.T) +
+lambda_m**3 * sin(lambda_m.T) * cos(lambda_m) -
+lambda_m**3 * sin(lambda_m.T) * cosh(lambda_m) +
+lambda_m**3 * cos(lambda_m) * sinh(lambda_m.T) -
+lambda_m**3 * sinh(lambda_m.T) * cosh(lambda_m)) / (a**3 * (lambda_m.T**4 -
+lambda_m**4))
+
+ddXmddXm = 
+lambda_m**3 * (gamma_m**2 * lambda_m +
+gamma_m**2 * sin(lambda_m) * cosh(lambda_m) + gamma_m**2 * sin(2 * lambda_m) / 4
++ gamma_m**2 * cos(lambda_m) * sinh(lambda_m) +
+gamma_m**2 * sinh(2 * lambda_m) / 4 + 2 * gamma_m * sin(lambda_m) * sinh(lambda_m)
+- gamma_m * cos(2 * lambda_m) / 2 + gamma_m * cosh(2 * lambda_m) / 2 +
+sin(lambda_m) * cosh(lambda_m) - sin(2 * lambda_m) / 4 -
+cos(lambda_m) * sinh(lambda_m) + sinh(2 * lambda_m) / 4) / a**3
+
+XkdXm = 
+-lambda_m * (gamma_m.T * gamma_m * lambda_m.T**3 * sin(lambda_m.T) * sin(lambda_m) +
+gamma_m.T * gamma_m * lambda_m.T**3 * sin(lambda_m.T) * sinh(lambda_m) -
+gamma_m.T * gamma_m * lambda_m.T**3 * sin(lambda_m) * sinh(lambda_m.T) -
+gamma_m.T * gamma_m * lambda_m.T**3 * sinh(lambda_m.T) * sinh(lambda_m) +
+gamma_m.T * gamma_m * lambda_m.T**2 * lambda_m * cos(lambda_m.T) * cos(lambda_m) +
+gamma_m.T * gamma_m * lambda_m.T**2 * lambda_m * cos(lambda_m.T) * cosh(lambda_m) +
+gamma_m.T * gamma_m * lambda_m.T**2 * lambda_m * cos(lambda_m) * cosh(lambda_m.T) +
+gamma_m.T * gamma_m * lambda_m.T**2 * lambda_m * cosh(lambda_m.T) * cosh(lambda_m) -
+4 * gamma_m.T * gamma_m * lambda_m.T**2 * lambda_m +
+gamma_m.T * gamma_m * lambda_m.T * lambda_m**2 * sin(lambda_m.T) * sin(lambda_m) -
+gamma_m.T * gamma_m * lambda_m.T * lambda_m**2 * sin(lambda_m.T) * sinh(lambda_m) +
+gamma_m.T * gamma_m * lambda_m.T * lambda_m**2 * sin(lambda_m) * sinh(lambda_m.T) -
+gamma_m.T * gamma_m * lambda_m.T * lambda_m**2 * sinh(lambda_m.T) * sinh(lambda_m) +
+gamma_m.T * gamma_m * lambda_m**3 * cos(lambda_m.T) * cos(lambda_m) -
+gamma_m.T * gamma_m * lambda_m**3 * cos(lambda_m.T) * cosh(lambda_m) -
+gamma_m.T * gamma_m * lambda_m**3 * cos(lambda_m) * cosh(lambda_m.T) +
+gamma_m.T * gamma_m * lambda_m**3 * cosh(lambda_m.T) * cosh(lambda_m) -
+gamma_m.T * lambda_m.T**3 * sin(lambda_m.T) * cos(lambda_m) +
+gamma_m.T * lambda_m.T**3 * sin(lambda_m.T) * cosh(lambda_m) +
+gamma_m.T * lambda_m.T**3 * cos(lambda_m) * sinh(lambda_m.T) -
+gamma_m.T * lambda_m.T**3 * sinh(lambda_m.T) * cosh(lambda_m) +
+gamma_m.T * lambda_m.T**2 * lambda_m * sin(lambda_m) * cos(lambda_m.T) +
+gamma_m.T * lambda_m.T**2 * lambda_m * sin(lambda_m) * cosh(lambda_m.T) +
+gamma_m.T * lambda_m.T**2 * lambda_m * cos(lambda_m.T) * sinh(lambda_m) +
+gamma_m.T * lambda_m.T**2 * lambda_m * sinh(lambda_m) * cosh(lambda_m.T) -
+gamma_m.T * lambda_m.T * lambda_m**2 * sin(lambda_m.T) * cos(lambda_m) -
+gamma_m.T * lambda_m.T * lambda_m**2 * sin(lambda_m.T) * cosh(lambda_m) -
+gamma_m.T * lambda_m.T * lambda_m**2 * cos(lambda_m) * sinh(lambda_m.T) -
+gamma_m.T * lambda_m.T * lambda_m**2 * sinh(lambda_m.T) * cosh(lambda_m) +
+gamma_m.T * lambda_m**3 * sin(lambda_m) * cos(lambda_m.T) -
+gamma_m.T * lambda_m**3 * sin(lambda_m) * cosh(lambda_m.T) -
+gamma_m.T * lambda_m**3 * cos(lambda_m.T) * sinh(lambda_m) +
+gamma_m.T * lambda_m**3 * sinh(lambda_m) * cosh(lambda_m.T) -
+gamma_m * lambda_m.T**3 * sin(lambda_m) * cos(lambda_m.T) -
+gamma_m * lambda_m.T**3 * sin(lambda_m) * cosh(lambda_m.T) -
+gamma_m * lambda_m.T**3 * cos(lambda_m.T) * sinh(lambda_m) -
+gamma_m * lambda_m.T**3 * sinh(lambda_m) * cosh(lambda_m.T) +
+gamma_m * lambda_m.T**2 * lambda_m * sin(lambda_m.T) * cos(lambda_m) +
+gamma_m * lambda_m.T**2 * lambda_m * sin(lambda_m.T) * cosh(lambda_m) +
+gamma_m * lambda_m.T**2 * lambda_m * cos(lambda_m) * sinh(lambda_m.T) +
+gamma_m * lambda_m.T**2 * lambda_m * sinh(lambda_m.T) * cosh(lambda_m) -
+gamma_m * lambda_m.T * lambda_m**2 * sin(lambda_m) * cos(lambda_m.T) +
+gamma_m * lambda_m.T * lambda_m**2 * sin(lambda_m) * cosh(lambda_m.T) +
+gamma_m * lambda_m.T * lambda_m**2 * cos(lambda_m.T) * sinh(lambda_m) -
+gamma_m * lambda_m.T * lambda_m**2 * sinh(lambda_m) * cosh(lambda_m.T) +
+gamma_m * lambda_m**3 * sin(lambda_m.T) * cos(lambda_m) -
+gamma_m * lambda_m**3 * sin(lambda_m.T) * cosh(lambda_m) -
+gamma_m * lambda_m**3 * cos(lambda_m) * sinh(lambda_m.T) +
+gamma_m * lambda_m**3 * sinh(lambda_m.T) * cosh(lambda_m) +
+lambda_m.T**3 * cos(lambda_m.T) * cos(lambda_m) -
+lambda_m.T**3 * cos(lambda_m.T) * cosh(lambda_m) +
+lambda_m.T**3 * cos(lambda_m) * cosh(lambda_m.T) -
+lambda_m.T**3 * cosh(lambda_m.T) * cosh(lambda_m) +
+lambda_m.T**2 * lambda_m * sin(lambda_m.T) * sin(lambda_m) +
+lambda_m.T**2 * lambda_m * sin(lambda_m.T) * sinh(lambda_m) +
+lambda_m.T**2 * lambda_m * sin(lambda_m) * sinh(lambda_m.T) +
+lambda_m.T**2 * lambda_m * sinh(lambda_m.T) * sinh(lambda_m) +
+lambda_m.T * lambda_m**2 * cos(lambda_m.T) * cos(lambda_m) +
+lambda_m.T * lambda_m**2 * cos(lambda_m.T) * cosh(lambda_m) -
+lambda_m.T * lambda_m**2 * cos(lambda_m) * cosh(lambda_m.T) -
+lambda_m.T * lambda_m**2 * cosh(lambda_m.T) * cosh(lambda_m) +
+lambda_m**3 * sin(lambda_m.T) * sin(lambda_m) -
+lambda_m**3 * sin(lambda_m.T) * sinh(lambda_m) -
+lambda_m**3 * sin(lambda_m) * sinh(lambda_m.T) +
+lambda_m**3 * sinh(lambda_m.T) * sinh(lambda_m)) / (lambda_m.T**4 - lambda_m**4)
+
+XmdXm = 
+gamma_m**2 * cos(lambda_m)**2 / 2 -
+gamma_m**2 * cos(lambda_m) * cosh(lambda_m) +
+gamma_m**2 * cosh(2 * lambda_m) / 4 + gamma_m**2 / 4 -
+gamma_m * sin(lambda_m) * cosh(lambda_m) + gamma_m * sin(2 * lambda_m) / 2 -
+gamma_m * cos(lambda_m) * sinh(lambda_m) + gamma_m * sinh(2 * lambda_m) / 2 -
+sin(lambda_m) * sinh(lambda_m) - cos(lambda_m)**2 / 2 + cosh(2 * lambda_m) / 4
++ 1 / 4
+
+ddXkdXm = 
+lambda_m.T**2 * lambda_m * (gamma_m.T * gamma_m * lambda_m.T**3 * sin(lambda_m.T) * sin(la
+mbda_m) + gamma_m.T * gamma_m * lambda_m.T**3 * sin(lambda_m.T) * sinh(lambda_m) +
+gamma_m.T * gamma_m * lambda_m.T**3 * sin(lambda_m) * sinh(lambda_m.T) +
+gamma_m.T * gamma_m * lambda_m.T**3 * sinh(lambda_m.T) * sinh(lambda_m) +
+gamma_m.T * gamma_m * lambda_m.T**2 * lambda_m * cos(lambda_m.T) * cos(lambda_m) +
+gamma_m.T * gamma_m * lambda_m.T**2 * lambda_m * cos(lambda_m.T) * cosh(lambda_m) -
+gamma_m.T * gamma_m * lambda_m.T**2 * lambda_m * cos(lambda_m) * cosh(lambda_m.T) -
+gamma_m.T * gamma_m * lambda_m.T**2 * lambda_m * cosh(lambda_m.T) * cosh(lambda_m) +
+gamma_m.T * gamma_m * lambda_m.T * lambda_m**2 * sin(lambda_m.T) * sin(lambda_m) -
+gamma_m.T * gamma_m * lambda_m.T * lambda_m**2 * sin(lambda_m.T) * sinh(lambda_m) -
+gamma_m.T * gamma_m * lambda_m.T * lambda_m**2 * sin(lambda_m) * sinh(lambda_m.T) +
+gamma_m.T * gamma_m * lambda_m.T * lambda_m**2 * sinh(lambda_m.T) * sinh(lambda_m) +
+gamma_m.T * gamma_m * lambda_m**3 * cos(lambda_m.T) * cos(lambda_m) -
+gamma_m.T * gamma_m * lambda_m**3 * cos(lambda_m.T) * cosh(lambda_m) +
+gamma_m.T * gamma_m * lambda_m**3 * cos(lambda_m) * cosh(lambda_m.T) -
+gamma_m.T * gamma_m * lambda_m**3 * cosh(lambda_m.T) * cosh(lambda_m) -
+gamma_m.T * lambda_m.T**3 * sin(lambda_m.T) * cos(lambda_m) +
+gamma_m.T * lambda_m.T**3 * sin(lambda_m.T) * cosh(lambda_m) -
+gamma_m.T * lambda_m.T**3 * cos(lambda_m) * sinh(lambda_m.T) +
+gamma_m.T * lambda_m.T**3 * sinh(lambda_m.T) * cosh(lambda_m) +
+gamma_m.T * lambda_m.T**2 * lambda_m * sin(lambda_m) * cos(lambda_m.T) -
+gamma_m.T * lambda_m.T**2 * lambda_m * sin(lambda_m) * cosh(lambda_m.T) +
+gamma_m.T * lambda_m.T**2 * lambda_m * cos(lambda_m.T) * sinh(lambda_m) -
+gamma_m.T * lambda_m.T**2 * lambda_m * sinh(lambda_m) * cosh(lambda_m.T) -
+gamma_m.T * lambda_m.T * lambda_m**2 * sin(lambda_m.T) * cos(lambda_m) -
+gamma_m.T * lambda_m.T * lambda_m**2 * sin(lambda_m.T) * cosh(lambda_m) +
+gamma_m.T * lambda_m.T * lambda_m**2 * cos(lambda_m) * sinh(lambda_m.T) +
+gamma_m.T * lambda_m.T * lambda_m**2 * sinh(lambda_m.T) * cosh(lambda_m) +
+gamma_m.T * lambda_m**3 * sin(lambda_m) * cos(lambda_m.T) +
+gamma_m.T * lambda_m**3 * sin(lambda_m) * cosh(lambda_m.T) -
+gamma_m.T * lambda_m**3 * cos(lambda_m.T) * sinh(lambda_m) -
+gamma_m.T * lambda_m**3 * sinh(lambda_m) * cosh(lambda_m.T) -
+gamma_m * lambda_m.T**3 * sin(lambda_m) * cos(lambda_m.T) +
+gamma_m * lambda_m.T**3 * sin(lambda_m) * cosh(lambda_m.T) -
+gamma_m * lambda_m.T**3 * cos(lambda_m.T) * sinh(lambda_m) +
+gamma_m * lambda_m.T**3 * sinh(lambda_m) * cosh(lambda_m.T) +
+gamma_m * lambda_m.T**2 * lambda_m * sin(lambda_m.T) * cos(lambda_m) +
+gamma_m * lambda_m.T**2 * lambda_m * sin(lambda_m.T) * cosh(lambda_m) -
+gamma_m * lambda_m.T**2 * lambda_m * cos(lambda_m) * sinh(lambda_m.T) -
+gamma_m * lambda_m.T**2 * lambda_m * sinh(lambda_m.T) * cosh(lambda_m) -
+gamma_m * lambda_m.T * lambda_m**2 * sin(lambda_m) * cos(lambda_m.T) -
+gamma_m * lambda_m.T * lambda_m**2 * sin(lambda_m) * cosh(lambda_m.T) +
+gamma_m * lambda_m.T * lambda_m**2 * cos(lambda_m.T) * sinh(lambda_m) +
+gamma_m * lambda_m.T * lambda_m**2 * sinh(lambda_m) * cosh(lambda_m.T) +
+gamma_m * lambda_m**3 * sin(lambda_m.T) * cos(lambda_m) -
+gamma_m * lambda_m**3 * sin(lambda_m.T) * cosh(lambda_m) +
+gamma_m * lambda_m**3 * cos(lambda_m) * sinh(lambda_m.T) -
+gamma_m * lambda_m**3 * sinh(lambda_m.T) * cosh(lambda_m) +
+lambda_m.T**3 * cos(lambda_m.T) * cos(lambda_m) -
+lambda_m.T**3 * cos(lambda_m.T) * cosh(lambda_m) -
+lambda_m.T**3 * cos(lambda_m) * cosh(lambda_m.T) +
+lambda_m.T**3 * cosh(lambda_m.T) * cosh(lambda_m) +
+lambda_m.T**2 * lambda_m * sin(lambda_m.T) * sin(lambda_m) +
+lambda_m.T**2 * lambda_m * sin(lambda_m.T) * sinh(lambda_m) -
+lambda_m.T**2 * lambda_m * sin(lambda_m) * sinh(lambda_m.T) -
+lambda_m.T**2 * lambda_m * sinh(lambda_m.T) * sinh(lambda_m) +
+lambda_m.T * lambda_m**2 * cos(lambda_m.T) * cos(lambda_m) +
+lambda_m.T * lambda_m**2 * cos(lambda_m.T) * cosh(lambda_m) +
+lambda_m.T * lambda_m**2 * cos(lambda_m) * cosh(lambda_m.T) +
+lambda_m.T * lambda_m**2 * cosh(lambda_m.T) * cosh(lambda_m) -
+4 * lambda_m.T * lambda_m**2 + lambda_m**3 * sin(lambda_m.T) * sin(lambda_m) -
+lambda_m**3 * sin(lambda_m.T) * sinh(lambda_m) +
+lambda_m**3 * sin(lambda_m) * sinh(lambda_m.T) -
+lambda_m**3 * sinh(lambda_m.T) * sinh(lambda_m)) / (a**2 * (lambda_m.T**4 -
+lambda_m**4))
+
+ddXmdXm = 
+lambda_m**2 * (gamma_m**2 * sin(lambda_m) * sinh(lambda_m) -
+gamma_m**2 * cos(lambda_m)**2 / 2 + gamma_m**2 * cosh(2 * lambda_m) / 4 +
+gamma_m**2 / 4 + gamma_m * sin(lambda_m) * cosh(lambda_m) -
+gamma_m * sin(2 * lambda_m) / 2 - gamma_m * cos(lambda_m) * sinh(lambda_m) +
+gamma_m * sinh(2 * lambda_m) / 2 + cos(lambda_m)**2 / 2 -
+cos(lambda_m) * cosh(lambda_m) + cosh(2 * lambda_m) / 4 + 1 / 4) / a**2
+

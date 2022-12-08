@@ -1,0 +1,227 @@
+Symbolic expressions for the coefficients of the assumed deflection
+
+Source: AssumedDflectionCoefficients.py [v1.0] (15:41:46 19-06-2020).
+
+Simply supported / simply supported: 
+FiniteSet((gamma_2**2 * w_p / (gamma_1**2 - gamma_2**2),
+-gamma_2**2 * w_p * (cosh(a * gamma_1) - 1) / ((gamma_1**2 -
+gamma_2**2) * sinh(a * gamma_1)), -gamma_1**2 * w_p / (gamma_1**2 -
+gamma_2**2), gamma_1**2 * w_p * (cosh(a * gamma_2) - 1) / ((gamma_1**2 -
+gamma_2**2) * sinh(a * gamma_2))))
+FiniteSet((-w_p, -gamma_1 * w_p * (cosh(a * gamma_1) -
+1) / (2 * sinh(a * gamma_1)),
+-w_p * (a * gamma_1 * cosh(a * gamma_1) / sinh(a * gamma_1)**2 -
+a * gamma_1 / sinh(a * gamma_1)**2 - 2 / tanh(a * gamma_1) +
+2 / sinh(a * gamma_1)) / 2, gamma_1 * w_p / 2))
+FiniteSet((-w_p, w_p * (2 * gamma_1**2 * cos(a * gamma_2) * sinh(a * gamma_1) -
+gamma_1**2 * sinh(2 * a * gamma_1) -
+4 * gamma_1 * gamma_2 * sin(a * gamma_2) * cosh(a * gamma_1) +
+2 * gamma_1 * gamma_2 * sin(2 * a * gamma_2) -
+2 * gamma_2**2 * cos(a * gamma_2) * sinh(a * gamma_1) + gamma_2**2 * sinh(2 * a * gamm
+a_1)) / (2 * gamma_1 * gamma_2 * (sin(a * gamma_2)**2 * cosh(2 * a * gamma_1) +
+sin(a * gamma_2)**2 + cos(a * gamma_2)**2 * cosh(2 * a * gamma_1) -
+cos(a * gamma_2)**2)), -w_p * (2 * gamma_1**2 * sin(a * gamma_2) * cosh(a * gamma_1)
+- gamma_1**2 * sin(2 * a * gamma_2) +
+4 * gamma_1 * gamma_2 * cos(a * gamma_2) * sinh(a * gamma_1) -
+2 * gamma_1 * gamma_2 * sinh(2 * a * gamma_1) -
+2 * gamma_2**2 * sin(a * gamma_2) * cosh(a * gamma_1) + gamma_2**2 * sin(2 * a * gamma
+_2)) / (2 * gamma_1 * gamma_2 * (sin(a * gamma_2)**2 * cosh(2 * a * gamma_1) +
+sin(a * gamma_2)**2 + cos(a * gamma_2)**2 * cosh(2 * a * gamma_1) -
+cos(a * gamma_2)**2)), w_p * (gamma_1**2 -
+gamma_2**2) / (2 * gamma_1 * gamma_2)))
+
+Clamped / simply supported: 
+FiniteSet((gamma_2 * w_p * (gamma_1**2 * sinh(a * gamma_1) * cosh(a * gamma_2) -
+gamma_1**2 * sinh(a * gamma_1) + gamma_1 * gamma_2 * sinh(a * gamma_2) - gamma_2
+**2 * sinh(a * gamma_1) * cosh(a * gamma_2)) / (gamma_1**3 * sinh(a * gamma_2) * cosh(
+a * gamma_1) - gamma_1**2 * gamma_2 * sinh(a * gamma_1) * cosh(a * gamma_2) -
+gamma_1 * gamma_2**2 * sinh(a * gamma_2) * cosh(a * gamma_1) +
+gamma_2**3 * sinh(a * gamma_1) * cosh(a * gamma_2)),
+-gamma_2 * w_p * (gamma_1**2 * cosh(a * gamma_1) * cosh(a * gamma_2) -
+gamma_1**2 * cosh(a * gamma_1) -
+gamma_2**2 * cosh(a * gamma_1) * cosh(a * gamma_2) + gamma_2**2 * cosh(a * gamma_2
+)) / (gamma_1**3 * sinh(a * gamma_2) * cosh(a * gamma_1) -
+gamma_1**2 * gamma_2 * sinh(a * gamma_1) * cosh(a * gamma_2) -
+gamma_1 * gamma_2**2 * sinh(a * gamma_2) * cosh(a * gamma_1) +
+gamma_2**3 * sinh(a * gamma_1) * cosh(a * gamma_2)),
+-gamma_1 * w_p * (gamma_1**2 * sinh(a * gamma_2) * cosh(a * gamma_1) -
+gamma_1 * gamma_2 * sinh(a * gamma_1) -
+gamma_2**2 * sinh(a * gamma_2) * cosh(a * gamma_1) + gamma_2**2 * sinh(a * gamma_2
+)) / (gamma_1**3 * sinh(a * gamma_2) * cosh(a * gamma_1) -
+gamma_1**2 * gamma_2 * sinh(a * gamma_1) * cosh(a * gamma_2) -
+gamma_1 * gamma_2**2 * sinh(a * gamma_2) * cosh(a * gamma_1) +
+gamma_2**3 * sinh(a * gamma_1) * cosh(a * gamma_2)),
+gamma_1 * w_p * (gamma_1**2 * cosh(a * gamma_1) * cosh(a * gamma_2) -
+gamma_1**2 * cosh(a * gamma_1) -
+gamma_2**2 * cosh(a * gamma_1) * cosh(a * gamma_2) + gamma_2**2 * cosh(a * gamma_2
+)) / (gamma_1**3 * sinh(a * gamma_2) * cosh(a * gamma_1) -
+gamma_1**2 * gamma_2 * sinh(a * gamma_1) * cosh(a * gamma_2) -
+gamma_1 * gamma_2**2 * sinh(a * gamma_2) * cosh(a * gamma_1) +
+gamma_2**3 * sinh(a * gamma_1) * cosh(a * gamma_2))))
+FiniteSet((-w_p, -gamma_1 * w_p * (a * gamma_1 * sinh(a * gamma_1) +
+2 * cosh(a * gamma_1) - cosh(2 * a * gamma_1) - 1) / (2 * a * gamma_1 -
+sinh(2 * a * gamma_1)), w_p * (a * gamma_1 * sinh(a * gamma_1) + 2 * cosh(a * gamma_1)
+- cosh(2 * a * gamma_1) - 1) / (2 * a * gamma_1 - sinh(2 * a * gamma_1)),
+gamma_1 * w_p * (a * gamma_1 * cosh(a * gamma_1) + sinh(a * gamma_1) -
+sinh(2 * a * gamma_1)) / (2 * a * gamma_1 - sinh(2 * a * gamma_1))))
+FiniteSet((-w_p, w_p * (-gamma_1**2 * sin(a * gamma_2) * sinh(a * gamma_1) +
+gamma_1 * gamma_2 * sin(a * gamma_2)**2 * cosh(2 * a * gamma_1) -
+gamma_1 * gamma_2 * sin(a * gamma_2)**2 +
+gamma_1 * gamma_2 * cos(a * gamma_2)**2 * cosh(2 * a * gamma_1) +
+gamma_1 * gamma_2 * cos(a * gamma_2)**2 -
+2 * gamma_1 * gamma_2 * cos(a * gamma_2) * cosh(a * gamma_1) + gamma_2**2 * sin(a * ga
+mma_2) * sinh(a * gamma_1)) / (gamma_2 * (gamma_1 * sin(2 * a * gamma_2) -
+gamma_2 * sinh(2 * a * gamma_1))),
+-w_p * (-gamma_1**2 * sin(a * gamma_2) * sinh(a * gamma_1) +
+gamma_1 * gamma_2 * sin(a * gamma_2)**2 * cosh(2 * a * gamma_1) -
+gamma_1 * gamma_2 * sin(a * gamma_2)**2 +
+gamma_1 * gamma_2 * cos(a * gamma_2)**2 * cosh(2 * a * gamma_1) +
+gamma_1 * gamma_2 * cos(a * gamma_2)**2 -
+2 * gamma_1 * gamma_2 * cos(a * gamma_2) * cosh(a * gamma_1) + gamma_2**2 * sin(a * ga
+mma_2) * sinh(a * gamma_1)) / (gamma_1 * (gamma_1 * sin(2 * a * gamma_2) -
+gamma_2 * sinh(2 * a * gamma_1))),
+w_p * (gamma_1**3 * sin(a * gamma_2) * cosh(a * gamma_1) +
+gamma_1**2 * gamma_2 * cos(a * gamma_2) * sinh(a * gamma_1) -
+gamma_1**2 * gamma_2 * sinh(2 * a * gamma_1) +
+gamma_1 * gamma_2**2 * sin(a * gamma_2) * cosh(a * gamma_1) -
+gamma_1 * gamma_2**2 * sin(2 * a * gamma_2) + gamma_2**3 * cos(a * gamma_2) * sinh(a
+ * gamma_1)) / (gamma_1 * gamma_2 * (gamma_1 * sin(2 * a * gamma_2) -
+gamma_2 * sinh(2 * a * gamma_1)))))
+
+Free / simply supported: 
+FiniteSet((gamma_2**2 * w_p * (gamma_1 * sinh(a * gamma_2) -
+gamma_2 * sinh(a * gamma_1)) / (gamma_1**3 * sinh(a * gamma_2) * cosh(a * gamma_1) -
+gamma_1**2 * gamma_2 * sinh(a * gamma_1) * cosh(a * gamma_2) -
+gamma_1 * gamma_2**2 * sinh(a * gamma_2) * cosh(a * gamma_1) +
+gamma_2**3 * sinh(a * gamma_1) * cosh(a * gamma_2)),
+gamma_2**3 * w_p * (cosh(a * gamma_1) -
+cosh(a * gamma_2)) / (gamma_1**3 * sinh(a * gamma_2) * cosh(a * gamma_1) -
+gamma_1**2 * gamma_2 * sinh(a * gamma_1) * cosh(a * gamma_2) -
+gamma_1 * gamma_2**2 * sinh(a * gamma_2) * cosh(a * gamma_1) +
+gamma_2**3 * sinh(a * gamma_1) * cosh(a * gamma_2)),
+-gamma_1**2 * w_p * (gamma_1 * sinh(a * gamma_2) -
+gamma_2 * sinh(a * gamma_1)) / (gamma_1**3 * sinh(a * gamma_2) * cosh(a * gamma_1) -
+gamma_1**2 * gamma_2 * sinh(a * gamma_1) * cosh(a * gamma_2) -
+gamma_1 * gamma_2**2 * sinh(a * gamma_2) * cosh(a * gamma_1) +
+gamma_2**3 * sinh(a * gamma_1) * cosh(a * gamma_2)),
+-gamma_1**3 * w_p * (cosh(a * gamma_1) -
+cosh(a * gamma_2)) / (gamma_1**3 * sinh(a * gamma_2) * cosh(a * gamma_1) -
+gamma_1**2 * gamma_2 * sinh(a * gamma_1) * cosh(a * gamma_2) -
+gamma_1 * gamma_2**2 * sinh(a * gamma_2) * cosh(a * gamma_1) +
+gamma_2**3 * sinh(a * gamma_1) * cosh(a * gamma_2))))
+FiniteSet((-2 * w_p * (a * gamma_1 * cosh(a * gamma_1) -
+sinh(a * gamma_1)) / (2 * a * gamma_1 - sinh(2 * a * gamma_1)),
+-a * gamma_1**2 * w_p * sinh(a * gamma_1) / (2 * a * gamma_1 - sinh(2 * a * gamma_1)),
+3 * a * gamma_1 * w_p * sinh(a * gamma_1) / (2 * (a * gamma_1 - sinh(2 * a * gamma_1) / 2)),
+gamma_1 * w_p * (a * gamma_1 * cosh(a * gamma_1) - sinh(a * gamma_1)) / (2 * a * gamma_1
+- sinh(2 * a * gamma_1))))
+FiniteSet((-2 * w_p * (gamma_1 * sin(a * gamma_2) * cosh(a * gamma_1) -
+gamma_2 * cos(a * gamma_2) * sinh(a * gamma_1)) / (gamma_1 * sin(2 * a * gamma_2) -
+gamma_2 * sinh(2 * a * gamma_1)), -w_p * (gamma_1**2 - 3 * gamma_2**2) * sin(a * gam
+ma_2) * sinh(a * gamma_1) / (gamma_2 * (gamma_1 * sin(2 * a * gamma_2) -
+gamma_2 * sinh(2 * a * gamma_1))), w_p * (3 * gamma_1**2 - gamma_2**2) * sin(a * gam
+ma_2) * sinh(a * gamma_1) / (gamma_1 * (gamma_1 * sin(2 * a * gamma_2) -
+gamma_2 * sinh(2 * a * gamma_1))),
+w_p * (gamma_1**3 * sin(a * gamma_2) * cosh(a * gamma_1) -
+gamma_1**2 * gamma_2 * cos(a * gamma_2) * sinh(a * gamma_1) -
+gamma_1 * gamma_2**2 * sin(a * gamma_2) * cosh(a * gamma_1) + gamma_2**3 * cos(a * g
+amma_2) * sinh(a * gamma_1)) / (gamma_1 * gamma_2 * (gamma_1 * sin(2 * a * gamma_2) -
+gamma_2 * sinh(2 * a * gamma_1)))))
+
+Clamped / clamped: 
+FiniteSet((-gamma_2 * w_p * (-gamma_1 * cosh(a * gamma_1) * cosh(a * gamma_2) +
+gamma_1 * cosh(a * gamma_1) - gamma_1 * cosh(a * gamma_2) + gamma_1 + gamma_2 * 
+sinh(a * gamma_1) * sinh(a * gamma_2)) / (gamma_1**2 * sinh(a * gamma_1) * sinh(a * ga
+mma_2) - 2 * gamma_1 * gamma_2 * cosh(a * gamma_1) * cosh(a * gamma_2) +
+2 * gamma_1 * gamma_2 + gamma_2**2 * sinh(a * gamma_1) * sinh(a * gamma_2)),
+-gamma_2 * w_p * (gamma_1 * sinh(a * gamma_1) * cosh(a * gamma_2) -
+gamma_1 * sinh(a * gamma_1) - gamma_2 * sinh(a * gamma_2) * cosh(a * gamma_1) +
+gamma_2 * sinh(a * gamma_2)) / (gamma_1**2 * sinh(a * gamma_1) * sinh(a * gamma_2) -
+2 * gamma_1 * gamma_2 * cosh(a * gamma_1) * cosh(a * gamma_2) + 2 * gamma_1 * gamma_2
++ gamma_2**2 * sinh(a * gamma_1) * sinh(a * gamma_2)),
+-gamma_1 * w_p * (gamma_1 * sinh(a * gamma_1) * sinh(a * gamma_2) -
+gamma_2 * cosh(a * gamma_1) * cosh(a * gamma_2) - gamma_2 * cosh(a * gamma_1) +
+gamma_2 * cosh(a * gamma_2) +
+gamma_2) / (gamma_1**2 * sinh(a * gamma_1) * sinh(a * gamma_2) -
+2 * gamma_1 * gamma_2 * cosh(a * gamma_1) * cosh(a * gamma_2) + 2 * gamma_1 * gamma_2
++ gamma_2**2 * sinh(a * gamma_1) * sinh(a * gamma_2)),
+gamma_1 * w_p * (gamma_1 * sinh(a * gamma_1) * cosh(a * gamma_2) -
+gamma_1 * sinh(a * gamma_1) - gamma_2 * sinh(a * gamma_2) * cosh(a * gamma_1) +
+gamma_2 * sinh(a * gamma_2)) / (gamma_1**2 * sinh(a * gamma_1) * sinh(a * gamma_2) -
+2 * gamma_1 * gamma_2 * cosh(a * gamma_1) * cosh(a * gamma_2) + 2 * gamma_1 * gamma_2
++ gamma_2**2 * sinh(a * gamma_1) * sinh(a * gamma_2))))
+FiniteSet((-w_p, -gamma_1 * w_p * (cosh(a * gamma_1) - 1) / (a * gamma_1 +
+sinh(a * gamma_1)), (w_p * cosh(a * gamma_1) - w_p) / (a * gamma_1 +
+sinh(a * gamma_1)), gamma_1 * w_p * sinh(a * gamma_1) / (a * gamma_1 +
+sinh(a * gamma_1))))
+FiniteSet((-w_p,
+-gamma_1 * w_p * (2 * gamma_1 * sin(a * gamma_2) * cosh(a * gamma_1) -
+gamma_1 * sin(2 * a * gamma_2) + 2 * gamma_2 * cos(a * gamma_2) * sinh(a * gamma_1) -
+gamma_2 * sinh(2 * a * gamma_1)) / (2 * gamma_1**2 * sin(a * gamma_2)**2 -
+gamma_2**2 * cosh(2 * a * gamma_1) + gamma_2**2),
+gamma_2 * w_p * (2 * gamma_1 * sin(a * gamma_2) * cosh(a * gamma_1) -
+gamma_1 * sin(2 * a * gamma_2) + 2 * gamma_2 * cos(a * gamma_2) * sinh(a * gamma_1) -
+gamma_2 * sinh(2 * a * gamma_1)) / (2 * gamma_1**2 * sin(a * gamma_2)**2 -
+gamma_2**2 * cosh(2 * a * gamma_1) + gamma_2**2),
+-w_p * (-gamma_1**2 * sin(a * gamma_2) * sinh(a * gamma_1) +
+gamma_1 * gamma_2 * sin(a * gamma_2)**2 * sinh(a * gamma_1)**2 +
+gamma_1 * gamma_2 * sin(a * gamma_2)**2 +
+gamma_1 * gamma_2 * cos(a * gamma_2)**2 * sinh(a * gamma_1)**2 - gamma_2**2 * sin(
+a * gamma_2) * sinh(a * gamma_1)) / (gamma_1**2 * sin(a * gamma_2)**2 -
+gamma_2**2 * sinh(a * gamma_1)**2)))
+
+Free / free: 
+FiniteSet((0, 0, 0, 0))
+FiniteSet((0, 0, 0, 0))
+FiniteSet((0, 0, 0, 0))
+
+Clamped / free: 
+FiniteSet((-gamma_2**2 * w_p * (-gamma_1**2 * cosh(a * gamma_1) * cosh(a * gamma_2
+) + gamma_1 * gamma_2 * sinh(a * gamma_1) * sinh(a * gamma_2) +
+gamma_2**2) / (gamma_1**4 +
+gamma_1**3 * gamma_2 * sinh(a * gamma_1) * sinh(a * gamma_2) -
+2 * gamma_1**2 * gamma_2**2 * cosh(a * gamma_1) * cosh(a * gamma_2) +
+gamma_1 * gamma_2**3 * sinh(a * gamma_1) * sinh(a * gamma_2) + gamma_2**4),
+-gamma_1 * gamma_2**2 * w_p * (gamma_1 * sinh(a * gamma_1) * cosh(a * gamma_2) -
+gamma_2 * sinh(a * gamma_2) * cosh(a * gamma_1)) / (gamma_1**4 +
+gamma_1**3 * gamma_2 * sinh(a * gamma_1) * sinh(a * gamma_2) -
+2 * gamma_1**2 * gamma_2**2 * cosh(a * gamma_1) * cosh(a * gamma_2) +
+gamma_1 * gamma_2**3 * sinh(a * gamma_1) * sinh(a * gamma_2) + gamma_2**4),
+-gamma_1**2 * w_p * (gamma_1**2 +
+gamma_1 * gamma_2 * sinh(a * gamma_1) * sinh(a * gamma_2) -
+gamma_2**2 * cosh(a * gamma_1) * cosh(a * gamma_2)) / (gamma_1**4 +
+gamma_1**3 * gamma_2 * sinh(a * gamma_1) * sinh(a * gamma_2) -
+2 * gamma_1**2 * gamma_2**2 * cosh(a * gamma_1) * cosh(a * gamma_2) +
+gamma_1 * gamma_2**3 * sinh(a * gamma_1) * sinh(a * gamma_2) + gamma_2**4),
+gamma_1**2 * gamma_2 * w_p * (gamma_1 * sinh(a * gamma_1) * cosh(a * gamma_2) -
+gamma_2 * sinh(a * gamma_2) * cosh(a * gamma_1)) / (gamma_1**4 +
+gamma_1**3 * gamma_2 * sinh(a * gamma_1) * sinh(a * gamma_2) -
+2 * gamma_1**2 * gamma_2**2 * cosh(a * gamma_1) * cosh(a * gamma_2) +
+gamma_1 * gamma_2**3 * sinh(a * gamma_1) * sinh(a * gamma_2) + gamma_2**4)))
+FiniteSet((-w_p, -gamma_1 * w_p * (2 * a * gamma_1 +
+sinh(2 * a * gamma_1)) / (-2 * a**2 * gamma_1**2 + cosh(2 * a * gamma_1) + 7),
+w_p * (2 * a * gamma_1 + sinh(2 * a * gamma_1)) / (-2 * a**2 * gamma_1**2 +
+cosh(2 * a * gamma_1) + 7), gamma_1 * w_p * (sinh(a * gamma_1)**2 +
+2) / (-a**2 * gamma_1**2 + sinh(a * gamma_1)**2 + 4)))
+FiniteSet((-w_p, gamma_1 * w_p * (gamma_1**3 * sin(2 * a * gamma_2) +
+gamma_1**2 * gamma_2 * sinh(2 * a * gamma_1) +
+gamma_1 * gamma_2**2 * sin(2 * a * gamma_2) +
+gamma_2**3 * sinh(2 * a * gamma_1)) / (2 * gamma_1**4 * sin(a * gamma_2)**2 +
+2 * gamma_1**2 * gamma_2**2 * sin(a * gamma_2)**2 -
+gamma_1**2 * gamma_2**2 * cosh(2 * a * gamma_1) - 7 * gamma_1**2 * gamma_2**2 -
+gamma_2**4 * cosh(2 * a * gamma_1) + gamma_2**4),
+-gamma_2 * w_p * (gamma_1**3 * sin(2 * a * gamma_2) +
+gamma_1**2 * gamma_2 * sinh(2 * a * gamma_1) +
+gamma_1 * gamma_2**2 * sin(2 * a * gamma_2) +
+gamma_2**3 * sinh(2 * a * gamma_1)) / (2 * gamma_1**4 * sin(a * gamma_2)**2 +
+2 * gamma_1**2 * gamma_2**2 * sin(a * gamma_2)**2 -
+gamma_1**2 * gamma_2**2 * cosh(2 * a * gamma_1) - 7 * gamma_1**2 * gamma_2**2 -
+gamma_2**4 * cosh(2 * a * gamma_1) + gamma_2**4),
+gamma_1 * gamma_2 * w_p * (gamma_1**2 * sin(a * gamma_2)**2 +
+gamma_1**2 * sinh(a * gamma_1)**2 + 2 * gamma_1**2 +
+gamma_2**2 * sin(a * gamma_2)**2 + gamma_2**2 * sinh(a * gamma_1)**2 -
+2 * gamma_2**2) / (-gamma_1**4 * sin(a * gamma_2)**2 -
+gamma_1**2 * gamma_2**2 * sin(a * gamma_2)**2 +
+gamma_1**2 * gamma_2**2 * sinh(a * gamma_1)**2 + 4 * gamma_1**2 * gamma_2**2 +
+gamma_2**4 * sinh(a * gamma_1)**2)))
+

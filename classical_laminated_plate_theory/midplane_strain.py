@@ -63,6 +63,9 @@ def midplane_strain(force : Dict[str, float], settings : Dict[str, str], stiffne
     [2]: Kaw, Autar. 2006. Mechanics of Composite Materials. 2nd ed. Boca Raton: Taylor & Francis Group, Example 4.3
     """
 
+    # Version of the script
+    version = f'v1.1'
+
     # The moisture absorption or moisture content change
     delta_C = force['delta_C']
     # The temperature difference/change
@@ -95,15 +98,42 @@ def midplane_strain(force : Dict[str, float], settings : Dict[str, str], stiffne
     Beta = stiffness['Beta']
 
     # An array of shape-(6) containing the mechanical, external forces (equation 3.51 from [1])
+    #         _     _
+    #        |  Nₓ   |
+    #        |  Nᵧ   |
+    # Fᵉˣᵗ = |  Nₓ   |
+    #        |  Mₓ   |
+    #        |  Mᵧ   |
+    #        |_ Mₓᵧ _|
+    #
     F_ext = array( [N_x, N_y, N_xy, M_x, M_y, M_xy] )
 
     # An array of shape-(6) containing the fictitious thermal loads (equations 4.64 and 4.65 from [2])
+    #         _      _
+    #        |  Nᵗₓ   |
+    #        |  Nᵗᵧ   |
+    # Fᵗʰᵉ = |  Nᵗₓ   | = ΔT ⋅ α
+    #        |  Mᵗₓ   |
+    #        |  Mᵗᵧ   |
+    #        |_ Mₜᵗₓᵧ _|
+    #
     F_the = delta_T * Alpha
 
     # An array of shape-(6) containing the fictitious moisture loads (equations 4.66 and 4.67 from [2])
+    #         _      _
+    #        |  Nᵐₓ   |
+    #        |  Nᵐᵧ   |
+    # Fᵐᵒⁱ = |  Nᵐₓ   | = ΔC ⋅ β
+    #        |  Mᵐₓ   |
+    #        |  Mᵐᵧ   |
+    #        |_ Mₜᵐₓᵧ _|
+    #
     F_moi = delta_C * Beta
 
     # An array of shape-(6) containing the external and (fictitious) hygrothermal forces acting on the laminate (equation 4.68 from [2])
+    #
+    # F = Fᵉˣᵗ + Fᵗʰᵉ + Fᵐᵒⁱ
+    #
     F = F_ext + F_the + F_moi
 
     # An array of shape-(6, 6) containing the ABD-matrix (equation 3.51 from [1])
@@ -125,7 +155,7 @@ def midplane_strain(force : Dict[str, float], settings : Dict[str, str], stiffne
             textfile.write(f'\n\n')
 
             # Add the source and a timestamp
-            textfile.write(fill(f'Source: midplane_strain.py [v1.0] ({datetime.now().strftime("%H:%M:%S %d-%m-%Y")}).') )
+            textfile.write(fill(f'Source: midplane_strain.py [{version}] ({datetime.now().strftime("%H:%M:%S %d-%m-%Y")}).') )
 
             # Add an empty line
             textfile.write(f'\n\n')
@@ -150,5 +180,14 @@ def midplane_strain(force : Dict[str, float], settings : Dict[str, str], stiffne
     # Append the strain dictionary with the mid-plane strains and curvatures
     strain['epsilon_0'] = epsilon_0
 
+    # Append the force dictionary with the mechanical, external load (vector)
+    force['F_ext'] = F_ext
+    # Append the force dictionary with the fictitious, thermal load (vector)
+    force['F_the'] = F_the
+    # Append the force dictionary with the fictitious, moisture load (vector)
+    force['F_moi'] = F_moi
+    # Append the force dictionary with the overall, net load (vector)
+    force['F'] = F
+
     # End the function and return the generated strain dictionary
-    return(strain)
+    return(strain, force)
